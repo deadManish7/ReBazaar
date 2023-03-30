@@ -87,13 +87,21 @@ submitBtn.addEventListener('click', function () {
       }
 
       if(valid){
-
+      
       let file = document.getElementById('image-id');
+      if(file.files[0]){
       if (file.files[0].size > (3 * 1048576)) {
         swal("Error !", "Image size is greater than 3 mb", "error");
-      }
+        valid = false;
+      }}
 
-      else {
+      else{
+          swal("Error", "Image is not uploaded ! Please upload before submitting .", "error");
+          valid = false;
+
+      }}
+
+      if(valid){
         let name = file.value;
         if (name) {
 
@@ -108,15 +116,10 @@ submitBtn.addEventListener('click', function () {
             swal("Error", "Uploaded file is not an Image! Please check", "error");
           }
         }
-
-        else {
-          swal("Error", "Image is not uploaded ! Please upload before submitting .", "error");
-        }
-
       }
     }}
   }
-});
+);
 
 function getExtension(filename) {
   var parts = filename.split('.');
