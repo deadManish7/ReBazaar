@@ -1,1 +1,1 @@
-server="http://localhost:3000";
+server="https://rebazaar.onrender.com/";
