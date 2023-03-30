@@ -1,3 +1,5 @@
+const server="https://rebazaar.onrender.com/";
+
 import {server} from './server.js';
 
 function ValidateEmail(input) {

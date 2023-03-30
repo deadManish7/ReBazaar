@@ -1,2 +1,1 @@
-server="https://rebazaar.onrender.com/";
-module.exports = {server}
+const server="https://rebazaar.onrender.com/";

@@ -1,3 +1,5 @@
+const server="https://rebazaar.onrender.com/";
+
 let btn = document.getElementById("submitB");
 
 btn.addEventListener('click', async function (e) {

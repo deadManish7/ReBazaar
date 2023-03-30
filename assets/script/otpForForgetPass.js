@@ -1,3 +1,5 @@
+const server="https://rebazaar.onrender.com/";
+
 function hideButton(){
     document.getElementById('alert').style.visibility='hidden';
     document.getElementById('closebtn').style.visibility='hidden';

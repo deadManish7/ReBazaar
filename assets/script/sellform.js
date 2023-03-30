@@ -1,3 +1,5 @@
+const server="https://rebazaar.onrender.com/";
+
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);

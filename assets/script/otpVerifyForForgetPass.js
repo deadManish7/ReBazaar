@@ -1,3 +1,5 @@
+const server="https://rebazaar.onrender.com/";
+
 let btn = document.getElementById("submitB");
 
 function hideButton(){
