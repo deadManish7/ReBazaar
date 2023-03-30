@@ -9,6 +9,14 @@ body{
     flex-direction: column;
 }
 
+.btn{
+    
+}
+
+img{
+
+}
+
 .noItemDiv{
     
     
@@ -261,17 +269,48 @@ footer{
 
   @media screen and (max-width: 900px) {
 
+    .navbar{
+        height: 7vh;
+    }
+
+    .btn{
+        font-size: 1.8rem;
+    }
+
+
+
+    .card-title{
+        font-size: 1.7rem;
+    }
+    .card{
+        font-size: 1.7rem;
+    }
+    .item-name{
+        font-size: 1.7rem;
+    }
+
+    .itemImage{
+        height: -webkit-fill-available;
+    }
+
+    .dropdown-item{
+        margin-bottom: 2%;
+        font-size: 1.5rem;
+    }
+
   
     .carousel-inner{
         margin-top: 2%;
     }
     
     
-    .navbar{
-        height: 5rem;
-    }
+    
 
     #nextPage{
         margin-top: 4.8%;
+    }
+
+    #footer-id{
+        font-size: 1.5rem;
     }
   }
