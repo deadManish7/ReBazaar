@@ -12,5 +12,24 @@
     "nodemon": "^2.0.21",
     "socket.io": "^4.6.1",
     "sweetalert": "^2.1.2"
-  }
+  },
+  "name": "rebazaar",
+  "version": "1.0.0",
+  "main": "serverNode.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node serverNode.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deadManish7/ReBazaar.git"
+  },
+  "author": "Manish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deadManish7/ReBazaar/issues"
+  },
+  "homepage": "https://github.com/deadManish7/ReBazaar#readme",
+  "description": ""
 }

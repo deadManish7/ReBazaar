@@ -14,6 +14,7 @@ const {protectRoute} = require('./backend/protectRoute.js');
 const {returnId} = require('./backend/protectRoute.js');
 const {sellRequestMail, adminVerifyMail} = require('./backend/nodemailer');
 const path = require('path');
+const PORT = process.env.PORT || 3000
 
 app.use(express.json());
 // app.use(express.urlencoded());
@@ -27,7 +28,7 @@ app.use(express.static(__dirname+"/assets"));
 
 const http = require('http').createServer(app);
 
-http.listen(3000,()=>{
+http.listen(PORT,()=>{
     console.log("Server started succesfully ...");
 });
 
