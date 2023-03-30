@@ -1,4 +1,4 @@
-const {server} = require('./server.js');
+import {server} from './server.js';
 
 function ValidateEmail(input) {
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
