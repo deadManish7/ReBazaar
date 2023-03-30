@@ -1,0 +1,116 @@
+body{
+    background-color: white;
+}
+
+i{
+    margin-right: 0.5%;
+}
+
+h1{
+    display: inline;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.noItemDiv{
+    
+    padding: 5%;
+    margin-top: 10%;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, #232526 , #414345);
+    color: white;
+    text-align: center;
+    
+}
+.noHeading{
+    padding: 5%;
+    text-align: center;
+    color: white;
+}
+
+.homeName{
+    float: left;
+    color: white;
+    padding: 1%;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.topText{
+    margin-right: 12rem;
+}
+
+.item{
+    float: right;
+
+}
+.heading{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+
+    color: white;
+    padding: 1%;
+    margin: 0;
+    background: black;
+}
+
+.chatContent{
+    padding: 0 1%;
+    margin-top: 2%;
+    
+}
+
+.row{
+    margin-bottom: 2%;
+    border: solid;
+    border-radius: 5px;
+}
+
+.chatPerson{
+    
+    
+    background-color: antiquewhite;
+    border-color: grey;
+    border-width: 0px 0px 2px;
+    border-style: solid;
+    padding: 3%;
+    border-radius: 2px;
+    margin-bottom: 2%;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media screen and (max-width: 900px)  {
+
+    .homeName{
+        padding-top: 2.5%;
+        font-size: 1rem;
+    }
+
+    .topText{
+        margin-right: 4rem;
+    }
+
+    .chatContent{
+        margin-top: 5%;
+    }
+    .chatPerson{
+        margin-bottom: 5%;
+    }
+
+    .noItemDiv{
+        margin-top: 50%;
+    }
+  }
+

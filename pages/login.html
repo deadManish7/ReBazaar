@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/image/rbFavicon.jpg" />
+
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/login.css">
+
+     <!-- Font Awesome Link -->
+   <script src="https://kit.fontawesome.com/fc95827daf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    
+
+
+      
+
+    <div class="flex-container">
+
+
+        <div class="signin-half2">
+            <form>
+                <span class="signin-title"><b>Login</b></span>
+
+                <div class="email-div container">
+                    <input type="email" placeholder="   Enter email" class="input-container" id="email-id">
+                </div>
+                <div class="password-div container">
+                    <input type="password" placeholder="   Enter password" class="input-container" id="password-id">
+                    <i class="fa-solid fa-eye" id="eye"> </i>
+                </div>
+
+                <button id="signin-submit">Login</button>
+
+                
+                <div class="linkDiv">
+                    <a href="/signup">Create Account</a>
+                </div>
+
+
+                <div class="linkDiv">
+                    <a href="/forgetPass">Forgot Password?</a>
+                </div>
+
+                
+                <script src="/script/server.js"></script>
+                <!-- SweetAlert -->
+                <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+                <script type="module" src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script src="/script/loginScript.js"></script>
+
+            </form>
+        </div>
+
+    </div>
+   
+</body>
+
+</html>

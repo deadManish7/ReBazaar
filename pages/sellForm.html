@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell-Form</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/image/rbFavicon.jpg" />
+
+
+    <!-- CSS StyleSheets -->
+  <link rel="stylesheet" href="/css/sell-form.css">
+ 
+
+  <!-- Font Awesome Link -->
+  <script src="https://kit.fontawesome.com/fc95827daf.js" crossorigin="anonymous"></script>
+
+   <!-- Google Fonts Link -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:ital,wght@1,100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+  <div class="flex-container">
+
+    <div class="sell">
+
+       
+      <h1 class="heading"><i class="fa-solid fa-circle-user"></i>  Hey Seller !</h1>
+      <h4 class="subHeading">  Sell your Item Hassle Free !</h4>
+      
+
+      <!-- Form -->
+        <form action="http://localhost:3000/sell" method="post" class="sell-form" enctype="multipart/form-data" id="form-id">
+
+          <div  >
+            <label for="">Enter your Item's Name</label>
+            <input class="sellform-part" type="text" id="name" name="itemName"required>
+          </div>
+
+            <div >
+              <label for="">Enter your Item's Price</label>
+              <input class="sellform-part" type="number" id="price" name="itemPrice">
+              
+            </div>
+
+            <input type="hidden" id="seller" name="seller">;
+            
+
+            <div >
+              <label for="">Enter your Item's Description</label>
+              <textarea class="sellform-part" id="description"  rows="5" cols="33" name="itemDescription"></textarea>
+            </div>
+
+            <div  >
+              <label class="imageLabel">Provide Image of your Item <br><p id="portrait-text">(Max. Size : 3 mb)</p><p>Allowed file types : jpg , jpeg , png </p></label>
+              <input class="sellform-part" id="image-id" type="file" accept="image/*" name="image"/>
+            </div>
+
+            <div class="cateogoryContainer">
+              <label for="" id="category">Select Category :</label>
+              <select id="Items" name="categoryName">
+                <option value="Other">Other</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Footwear">FootWear</option>
+                <option value="Clothes">Clothes</option>
+                <option value="Vehicle">Vehicle</option>
+                <option value="Books">Books</option>
+                
+              </select>
+            </div>
+
+            <div class="submitButton">
+              <button id="submitB" type="button">Submit</button> 
+            </div>
+
+            <div class="resetButton">
+              <button id="resetB" type="button">Reset</button>
+            </div>
+
+
+            <script src="/script/server.js"></script>
+            <!-- SweetAlert -->
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+            <script src="/script/sellform.js"></script>
+
+          </form>
+          
+    </div>
+
+
+  </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+body{
+    background-color: lightgrey;
+    /* background-color: lightgray; */
+}
+
+li{
+    font-weight: bolder;
+    
+    color: black;
+}
+
+
+
+button{
+    margin-left: 10%;
+}
+
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 5% 2% 5%;
+}
+
+
+.nav-item{
+    background: black;
+    border: none;
+}
+
+.nav-link{
+    font-family: 'Sora', sans-serif;
+}
+.navThing{
+    font-weight: bold;
+    color: black;
+}
+
+.navbar{
+    /* margin: 5%;
+    margin-top: 2%; */
+    margin-bottom: 2%;
+    background-color: black;
+    padding: 0% 2%;
+    
+   
+}
+
+.navbar-brand{
+    font-family: 'Sora', sans-serif;
+    margin-left: 2%;
+    font-size: 1.6rem;
+}
+
+.category{
+    margin-left: 30%;
+}
+
+.homeImage{
+    width: 100%;
+    height: 150px;
+}
+
+#title{
+    margin-bottom: 2%;
+}
+
+p{
+    font-family: 'Hind', sans-serif;
+    font-weight: 500;
+}
+
+
+
+.itemImage{
+    height: 15rem;
+    border-width: 0.1rem;
+}
+
+.card{
+    border-width: 0.1rem;
+
+    
+}
+
+
+@media screen and (max-width: 900px)  {
+    .navbar{
+        height: 6rem;
+    }
+    
+  }

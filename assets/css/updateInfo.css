@@ -1,0 +1,206 @@
+body{
+    /* background-image: linear-gradient(to right ,#de6262 , #ffb88c); */
+    background:rgb(98, 118, 126);
+    margin: 0;
+    padding: 0;
+  }
+
+  span{
+      font-family: 'Alata', sans-serif;
+      color: rgb(9, 78, 22);
+      margin-bottom: 10%;
+      font-size: 2rem;
+  }
+
+  #nameBox{
+    visibility: hidden;
+    display: none;
+  }
+  #passwordBox{
+    visibility: hidden;
+    display: none;
+  }
+
+  #eyeClose{
+    visibility: hidden;
+  }
+
+  
+
+ .name-container{
+    margin-right: 5%;
+ }
+  
+  .upperMsg{
+    display: inline-flex;
+    width: 100%;
+  }
+  
+  .flex-container{
+        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sell{
+    text-align: center;
+    border-top-width: 2px;
+    border : 2px solid red ;
+    border-radius: 10px;
+    background: whitesmoke;
+    /* display: inline-block; */
+    
+    margin-top: 2%;
+    
+    
+    padding: 2% 5% 2% 5%;
+  }
+  
+  .heading{
+    font-family: 'Alata', sans-serif;
+    color: rgb(9, 78, 22);
+    
+    font-size: 2rem;
+  }
+  .input{
+    display: flex;
+    
+  }
+  .bigInputContainer{
+    display: flex;
+    margin-bottom: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  input{
+    font-size: 1.2rem;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+    color: black;
+    /* display: inline-block; */
+  }
+  
+  label{
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    display:block;
+    font-size: 1rem;
+    margin-bottom: 5%;
+    font-weight: bold;
+  }
+
+
+  
+  
+  /* Button Attribute */
+  
+  
+  #submitB{
+    font-size: 1rem;
+  }
+  
+  #resetB{
+    font-size: 1rem;
+  }
+  
+  #submitB{
+    margin: 2.5vh  1vh ;
+    padding : 2vh;
+    font-family: 'Alata', sans-serif;
+    border: 2px solid rgb(100, 100, 104);
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  #submitB:hover{
+    background-color: #93a2c2;
+  }
+  
+  #submitB:active {
+    background-color: #95bdeb;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+  
+  #resetB{
+    margin: 2.5vh  1vh ;
+    padding : 2vh;
+    font-family: 'Alata', sans-serif;
+    border: 2px solid rgb(100, 100, 104);
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  #resetB:hover{
+    background-color: #93a2c2;
+  }
+  
+  #resetB:active {
+    background-color: #95bdeb;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+  
+  
+  /* The alert message box */
+  #alert {
+      
+      /* align-items:end; */
+      
+      width: 97%;
+      flex-basis: 1999%;
+      height : 1.2rem;
+      padding: 0.5%;
+      background-color: #f44336; /* Red */
+      color: white;
+      
+      
+      /* visibility: hidden; */
+    }
+    
+    /* The close button */
+    #closebtn {
+      
+      width: 5%;
+      
+      
+      width: fit-content;
+      color: black;
+      font-weight: bold;
+      /* float: right; */
+      font-size: 1.4rem;
+      
+      cursor: pointer;
+      /* visibility: hidden; */
+    }
+  
+  
+    .button-div{
+      width: 5%;
+      
+      /* align-self: flex-end; */
+    }
+    
+    /* When moving the mouse over the close button */
+    #closebtn:hover {
+      color: black;
+    }
+  
+    @media screen and (max-width: 900px)  {
+      .flex-container{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .sell{
+        margin-left: 0;
+      }
+    }

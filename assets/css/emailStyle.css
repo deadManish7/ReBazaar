@@ -1,0 +1,51 @@
+body{
+    /* Green
+    background-image: linear-gradient(to right ,#00b09b , #96c93d); */
+
+    /* Yellow */
+    background-image: linear-gradient(to right ,#FDC830 , #F37335);
+    font-family: 'Montserrat';
+    padding: 0% 5%;
+}
+
+
+.flex-container{
+      
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 4%;
+}
+
+.logoDiv{
+    text-align: center;
+    width: 15rem;
+    margin-top: 1%;
+    
+}
+
+.topContent{
+    margin-bottom: 3%;
+}
+
+.list{
+    margin-bottom: 10%;
+}
+
+  #logo{
+    width: 15rem;
+  }
+
+h1{
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;margin: 0;
+}
+
+li{
+    font-size: 1rem;
+    margin-bottom: 2%;
+}
+
+img{
+    border-radius: 10px  ;
+}

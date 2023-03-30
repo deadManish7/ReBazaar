@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>OTP Verify</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/image/rbFavicon.jpg" />
+  <!-- CSS StyleSheets -->
+  <link rel="stylesheet" href="/css/otp.css">
+
+  <!-- Font Awesome Link -->
+  <script src="https://kit.fontawesome.com/fc95827daf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+  <div class="flex-container">
+
+    <div class="sell">
+
+
+      <h1 class="heading">OTP Verification</h1>
+
+
+      <!-- Form -->
+      <form action="" method="post" class="sell-form" enctype="multipart/form-data">
+
+        <label for="">Enter the OTP</label>
+        <div class="input-container">
+
+          <input class="sellform-part" type="password" id="pass" name="itemName" required>
+          <i class="fa-solid fa-eye" id="eye"> </i>
+        </div>
+
+
+
+
+
+
+
+        <div class="submitButton">
+          <button id="submitB" type="submit">Submit</button>
+        </div>
+
+
+        <script>
+
+          let eye = document.getElementById("eye");
+
+          eye.addEventListener("click", function toggleBoxVisibility() {
+            let getPasword = document.getElementById("pass");
+
+            if (getPasword.type === "password") {
+              getPasword.type = "text";
+              document.querySelector("i").classList.remove("fa-eye");
+              document.querySelector("i").classList.add("fa-eye-slash");
+            } else {
+              getPasword.type = "password";
+              document.querySelector("i").classList.remove("fa-eye-slash");
+              document.querySelector("i").classList.add("fa-eye");
+
+            }
+
+
+
+          });
+
+        </script>
+        <script src="/script/server.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <script src="/script/otpVerifyForForgetPass.js"></script>
+        <!-- SweetAlert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+      </form>
+
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>

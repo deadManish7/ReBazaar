@@ -1,0 +1,51 @@
+body{
+    /* background-image: linear-gradient(to right ,#1FA2FF , #12D8FA , #A6FFCB); */
+    background-color: lightgray;
+}
+
+.navbar{
+    /* margin: 5%;
+    margin-top: 2%; */
+    margin-bottom: 2%;
+   
+   
+    /* background-image: linear-gradient(to right ,#26D0CE , #1A2980); */
+    background-color: black;
+    /* border-radius: 1rem; */
+    padding: 0% 2%;
+    
+   
+}
+
+.userNumbers{
+    margin-left: 8%;
+}
+
+button{
+    margin-left: 8%;
+}
+
+.navbar-brand{
+    margin-left: 2%;
+}
+
+.category{
+    margin-left: 30%;
+}
+
+.homeImage{
+    width: 100%;
+    height: 150px;
+}
+
+#title{
+    margin-bottom: 5%;
+}
+
+.itemImage{
+    height: 100%;
+    border-width: 0.1rem;
+}
+.card{
+    border-width: 0.1rem;
+}

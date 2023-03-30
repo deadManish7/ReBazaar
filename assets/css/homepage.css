@@ -1,0 +1,277 @@
+body{
+    background-color: white;
+    /* background-color: lightgray; */
+
+
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.noItemDiv{
+    
+    
+    border-radius: 15px;
+    background-image: linear-gradient(to right, #232526 , #414345);
+    color: white;
+    text-align: center;
+    
+}
+.noHeading{
+    margin-bottom: 8%;
+    padding: 3%;
+    text-align: center;
+    color: white;
+}
+
+.dropdown-item{
+    text-align: center;
+}
+
+.dropdown-item:hover{
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: solid;
+    border-color: white;
+    border-radius: 15px;
+    padding: 1%;
+}
+
+
+#nextPage{
+    margin-top: 2.6%;
+}
+
+#star{
+    font-weight: bolder;
+}
+
+/* Emoji CSS */
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+    font-size: 3rem;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+
+.carousel-inner{
+    text-align: center;
+    background-image: linear-gradient(to right, #000000 , #434343);
+    padding: 5% 10%;
+}
+
+.navbar-nav .dropdown-menu{
+    position: absolute;
+}
+
+h2{
+    font-family: 'Sora', sans-serif;
+    
+    display: inline-block;
+    color: white;
+}
+
+li{
+    font-weight: bolder;
+    cursor: pointer;
+    color: black;
+}
+
+/* .userAction{
+    margin-top: 0.45rem;
+} */
+
+.nav-link{
+    font-family: 'Sora', sans-serif;
+    
+}
+
+.navThing{
+    font-weight: bold;
+    color: black;
+}
+
+.navbar{
+    /* margin: 5%;
+    margin-top: 2%; */
+    margin-bottom: 2%;
+    background-color: black;
+    
+   
+   
+    
+    padding: 0% 2%;
+    
+   
+}
+
+.navbar-brand{
+    font-family: 'Sora', sans-serif;
+    margin-left: 2%;
+    font-size: 1.8rem;
+    
+}
+
+.category{
+    margin-left: 30%;
+}
+
+.homeImage{
+    width: 100%;
+    height: 150px;
+}
+
+#title{
+    margin-bottom: 5%;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+a{
+    color: white;
+}
+
+.nav-item{
+    background: black;
+    border: none;
+}
+
+.nav-link:hover {
+    border: solid;
+    color: white;
+    border-radius: 15px;
+  }
+
+.itemImage{
+    border-radius: 10px;
+    height: 15rem;
+    border-width: 0.1rem;
+}
+
+/* .card{
+    border-width: 0.1rem;
+
+    
+} */
+
+
+.col{
+    margin-bottom: 2%;
+}
+
+.card{
+    border: none;
+    border-color: white;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 6px 30px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    padding: 0;
+    /* -webkit-text-stroke-width: thin; */
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+.card:hover{
+
+    color: white;
+    font-weight: bolder;
+    background-image: linear-gradient(to right, #232526 , #414345);
+    transform: scale(1.05);
+    box-shadow: 0 30px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.endInfo{
+    padding-top: 1%;
+    text-align: center;
+    /* background-color: #222222; */
+    background-color:#222222;
+    color: white;
+    width: 100%;
+}
+
+footer{
+    margin-top: auto;
+    
+}
+.dev{
+    display: inline;
+}
+.copyright{
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: black; */
+    background-color: black;
+    color: white;
+    padding: 1% 2% 0% 2%;
+    display: flex;
+    justify-content: space-between;
+    /* #021b43 */
+}
+
+.pagesNum{
+    width: fit-content;
+    
+    margin: auto;
+    color: black;
+    margin-bottom: 1%;
+}
+
+.pageLink{
+    display: inline;
+    color: blue;
+    margin-right: 18%;
+}
+
+.link{
+    background: lightgray;
+    border: none;
+}
+
+
+/* @media screen and (max-width: 900px)  {
+
+} */
+
+
+
+  @media screen and (max-width: 900px) {
+
+  
+    .carousel-inner{
+        margin-top: 2%;
+    }
+    
+    
+    .navbar{
+        height: 5rem;
+    }
+
+    #nextPage{
+        margin-top: 4.8%;
+    }
+  }

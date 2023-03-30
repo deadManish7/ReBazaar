@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Update Info</title>
+    <!-- CSS StyleSheets -->
+  <link rel="stylesheet" href="updateInfo.css">
+
+  <!-- Font Awesome Link -->
+  <script src="https://kit.fontawesome.com/fc95827daf.js" crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+
+  <div class="upperMsg">
+    <div id="alert">.
+
+    </div>
+
+    <div class="button-div">
+      <button type="button" id="closebtn" onclick="hideButton()"><b>&times;</b></button>
+    </div>
+  </div>
+
+  <div class="flex-container">
+
+    <div>
+        <h1>ReBazaar</h1>
+    </div>
+
+
+  </div>
+
+   
+
+    
+
+    <div class="flex-container">
+
+      <div class="sell">
+
+       
+        <h1 class="heading">Update Info</h1>
+        
+  
+        <!-- Form -->
+          <form action="" method="post" class="sell-form" enctype="multipart/form-data">
+           <div class="bigInputContainer" >
+
+                <div class="name-container input">
+                    <label>Name</label><br>
+                    <input type="radio" id="name" name="radiogroup">
+                </div>
+           
+                <div class="password-container input">
+                    <label >Password </label><br>
+                    <input type="radio" id="password" name="radiogroup" >
+                    
+                </div>
+
+            </div>
+
+
+            <div  id="nameBox" >
+                <label for="">Enter New Name</label>
+                <input type="text" id="name" name="itemName"required>
+            </div>
+
+            <div id="passwordBox" >
+                <label for="">Enter New Password</label>
+                <input  type="password" id="pass" name="itemName"required > 
+                <i class="fa-solid fa-eye" id="eye"> </i>
+                <!-- <i class="fa-solid fa-eye-slash" id="eyeClose"></i></i> -->
+                
+            </div>
+
+
+            <script>
+                let btn =document.getElementById("name");
+                let btn2 =document.getElementById("password");
+                let eye = document.getElementById("eye");
+                let eyeClose = document.getElementById("eyeClose");
+
+                eye.addEventListener("click" , function toggleBoxVisibility() {
+                   
+                  
+
+                  let getPasword = document.getElementById("pass");  
+                  if (getPasword.type === "password") {  
+                  getPasword.type = "text";  
+                  document.querySelector("i").classList.remove("fa-eye");
+                  document.querySelector("i").classList.add("fa-eye-slash");
+                  
+                  
+                  } else {  
+                    getPasword.type = "password";  
+                    document.querySelector("i").classList.remove("fa-eye-slash");
+                    document.querySelector("i").classList.add("fa-eye");
+                  
+                  }  
+
+
+
+                });
+
+
+                // eyeClose.addEventListener("click" , function toggleBoxVisibility() {
+                   
+
+                //    let getPasword = document.getElementById("pass");  
+                //    if (getPasword.type !== "password") {  
+                //     getPasword.type = "password";  
+ 
+                //    eye.style.visibility = "visible";
+                //    eye.style.display = 'block';
+ 
+                //    eyeClose.style.visibility = "hidden";
+                //    eye.style.display = 'none';
+                   
+                //    } else {  
+                //      getPasword.type = "password";  
+                //    }  
+ 
+ 
+ 
+                //  });
+
+
+                
+  
+                btn.addEventListener("click" , function toggleBoxVisibility() {
+
+                if (btn.checked == true) {
+                    document.getElementById("nameBox").style.visibility = "visible";
+                    document.getElementById("nameBox").style.display = 'block';
+
+                    document.getElementById("passwordBox").style.visibility = "hidden";
+                    document.getElementById("passwordBox").style.display = 'none';
+                    
+                }
+
+                
+                
+            });
+
+
+
+            
+  
+                btn2.addEventListener("click" , function toggleBoxVisibility2() {
+
+                    if (btn2.checked == true) {
+                    document.getElementById("passwordBox").style.visibility = "visible";
+                    document.getElementById("passwordBox").style.display = 'block';
+
+                    document.getElementById("nameBox").style.visibility = "hidden";
+                    document.getElementById("nameBox").style.display = 'none';
+                    
+                }
+                // else if(btn.checked == true && btn2.checked == true){
+                //     document.getElementById("nameBox").style.visibility = "visible";
+                //     document.getElementById("nameBox").style.display = 'unset';
+
+                //     document.getElementById("passwordBox").style.visibility = "visible";
+                //     document.getElementById("passwordBox").style.display = 'unset';
+                // }
+               
+            });
+
+            
+                
+  
+              </script>
+
+            
+            
+            
+  
+             
+              
+            
+            
+            <div class="submitButton">
+                <button id="submitB" type="submit">Submit</button> 
+            </div>
+  
+              
+             
+            </form>
+            
+      </div>
+
+    </div>
+    <script src="/script/server.js"></script>
+</body>
+</html>

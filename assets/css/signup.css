@@ -1,0 +1,191 @@
+html{
+  height: 100%;
+    margin: 0;
+}
+body{
+    background: white;
+    margin: 0;
+    min-height: 100%;
+    height: 100%;
+}
+
+
+
+
+  
+  .flex-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logoDiv{
+    text-align: center;
+    width: 15rem;
+    margin-top: 2%;
+  }
+
+
+.signin-half2{
+
+  margin-top: 0%;
+  text-align: center;
+  border : 4px solid black ;
+  display: inline-block;
+  border-radius: 25px;
+  padding: 5% 75% 22% 75%;
+  background: whitesmoke;
+  padding: 2% 10% 2% 10%;
+
+   
+
+}
+
+
+.signup-title{
+    display: inline-block;
+    font-size: 2rem;
+    font-family: 'Alata', sans-serif;
+    margin-bottom: 16%;
+    
+    color: black;
+}
+
+.linkDiv{
+    margin-bottom: 10%;
+}
+
+.name-div{
+    margin-top: 10%;
+    margin-right: 7%;
+}
+
+.email-div{
+    margin-right: 7%;
+}
+
+#logo{
+  width: 15rem;
+}
+
+.container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input{
+   
+  margin-bottom: 8%;
+  padding: 1% 3%;
+}
+
+button{
+    margin-right: 7%;
+}
+a{
+    margin-right: 7%;
+}
+
+i{
+  padding: 2% 2%;
+  margin-top: 2%;
+}
+
+#signup-submit{
+    /* margin: 2.5vh 2vw 1vh 16vw; */
+    margin-bottom: 5%;
+    padding : 2vh;
+    font-family: 'Alata', sans-serif;
+    border: 2px solid rgb(100, 100, 104);
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+#signup-submit:hover{
+    background-color: #93a2c2;
+}
+
+#signup-submit:active {
+    background-color: #95bdeb;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+#login-link{
+    /* margin : 1vh 2vw 1vh 12vw; */
+    font-family: 'Alata', sans-serif;
+    text-decoration: none;
+}
+
+.input-container{
+    border : 2px solid black;
+    border-radius: 15px ;
+    /* width: 4rem; */
+    height : 5vh
+}
+
+/* The alert message box */
+#alert {
+    width: 97%;
+    flex-basis: 1999%;
+    height : 1.2rem;
+    padding: 0.5%;
+    background-color: #f44336; /* Red */
+    color: white;
+      /* visibility: hidden; */
+  }
+  
+  /* The close button */
+  #closebtn {
+    width: 5%;
+    
+    
+      width: fit-content;
+      color: black;
+      font-weight: bold;
+      /* float: right; */
+      font-size: 1.4rem;
+      
+      cursor: pointer;
+  }
+
+
+  .button-div{
+    width: 5%;
+    /* align-self: flex-end; */
+  }
+  
+  /* When moving the mouse over the close button */
+  #closebtn:hover {
+    color: black;
+  }
+
+
+
+  /* Media query */
+  @media screen and (max-width: 900px)  {
+    .flex-container{
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* .sell{
+      margin-left: 0;
+    } */
+    /* .sell{
+     display: flex;
+     display: block;
+     justify-content: center;
+     align-items: center;
+    }
+    .heading{
+      font-size: 1.5rem;
+    } */
+  }
+
+
+   
