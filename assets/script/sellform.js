@@ -88,7 +88,7 @@ submitBtn.addEventListener('click', function () {
 
       if(valid){
       
-      let file = document.getElementById('image-id');
+      file = document.getElementById('image-id');
       if(file.files[0]){
       if (file.files[0].size > (3 * 1048576)) {
         swal("Error !", "Image size is greater than 3 mb", "error");
@@ -102,6 +102,7 @@ submitBtn.addEventListener('click', function () {
       }}
 
       if(valid){
+
         let name = file.value;
         if (name) {
 
