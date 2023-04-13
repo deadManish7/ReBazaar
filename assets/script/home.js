@@ -1,4 +1,4 @@
-const server="https://rebazaar.onrender.com/";
+const server="https://rebazaar.onrender.com";
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -30,6 +30,7 @@ async function getHome() {
         if (resp.data.Name) {
             isLogin = true;
             userName = firstName(resp.data.Name);
+            let fullName = resp.data.Name;
             document.getElementById("carouselUser").textContent = "Greetings "+userName +" !";
             let listItem = document.getElementById("userDropdown");
             let markup;
@@ -38,7 +39,7 @@ async function getHome() {
                 markup = `
                 <a class="nav-link dropdown-toggle" href="" id="userName-id" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                ${userName}
+                ${fullName}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" onclick="myItemload()">My Items</a></li>
@@ -53,7 +54,7 @@ async function getHome() {
                 markup = `
             <a class="nav-link dropdown-toggle" href="" id="userName-id" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
-            ${userName}
+            ${fullName}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" onclick="myItemload()">My Items</a></li>

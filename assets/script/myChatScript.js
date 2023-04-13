@@ -1,4 +1,4 @@
-const server="https://rebazaar.onrender.com/";
+const server="https://rebazaar.onrender.com";
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -81,7 +81,7 @@ async function getRoom(){
     }
     let roomRes = await axios.post(server+"/chat/myChats", data1);
 
-    if(roomRes.data){
+    if(roomRes.data.length > 0){
         let roomData = roomRes.data;
         for(i = 0 ; i < roomData.length ; i++){
             createRoomDiv(roomData[i].User1,roomData[i].ItemName,roomData[i].RoomId,roomData[i].User2,roomData[i].IBlocked,roomData[i].UBlocked,roomData[i].LastMsgTime,roomData[i].User1DcTime)

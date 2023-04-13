@@ -1,4 +1,4 @@
-const server="https://rebazaar.onrender.com/";
+const server="https://rebazaar.onrender.com";
 
 function getCookie(cname) {
     let name = cname + "=";
