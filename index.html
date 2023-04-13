@@ -46,50 +46,85 @@
 <body>
 
   <div>
-    <nav class="navbar navbar-expand-lg navbar-dark  ">
-      <a class="navbar-brand" href="/">
-        ReBazaar
-      </a>
-
-      <ul class="navbar-nav list-group-horizontal">
-        <li class="nav-item dropdown category list-group-item">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <strong>Categories</strong>
+    <nav class="navbar  navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">ReBazaar</a>
+  
+        <ul class="navbar-nav list-group-horizontal">
+          <li class="nav-item dropdown category list-group-item" id="categoryId">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <strong>Categories</strong>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Other</a></li>
+              <li><a class="dropdown-item" href="#">Electronics</a></li>
+              <li><a class="dropdown-item" href="#">Footwear</a></li>
+              <li><a class="dropdown-item" href="#">Vehicle</a></li>
+              <li><a class="dropdown-item" href="#">Clothes</a></li>
+    
+            </ul>
+          </li>
+  
+  
+          <li class=" dropdown userAction list-group-item" id="usernameId">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            UserName
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="/?category=Electronics">Electronics</a></li>
-            <li><a class="dropdown-item" href="/?category=Footwear">Footwear</a></li>
-            <li><a class="dropdown-item" href="/?category=Vehicle">Vehicle</a></li>
-            <li><a class="dropdown-item" href="/?category=Clothes">Clothes</a></li>
-            <li><a class="dropdown-item" href="/?category=Books">Books</a></li>
-
+  
+            <li><a class="dropdown-item" href="#">Update Info</a></li>
+            <li><a class="dropdown-item" href="#">Delete Info</a></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li><a class="dropdown-item" href="#">My Items</a></li>
           </ul>
         </li>
-      </ul>
-
-      <ul class="navbar-nav ms-auto list-group list-group-horizontal">
-
-
-
-
-        <li id="userDropdown" class="nav-item dropdown userAction list-group-item">
-          <a class="nav-link" href="/login">Login</a>
-        </li>
-
-
-
-        <li class="nav-item list-group-item">
-          <a id="myChatName" class="nav-link" onclick="myChatLogin()">My Chats</a>
-        </li>
-        <li class="nav-item list-group-item">
-          <a class="nav-link" onclick="sellLogin()">Sell</a>
-        </li>
-        <li class="nav-item list-group-item">
-          <a class="nav-link" href="#footer-id">About Us</a>
-        </li>
-      </ul>
-
+        </ul>
+  
+        
+  
+  
+        
+  
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" fdprocessedid="0us20j">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ReBazaar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+  
+   
+          <div class="offcanvas-body">
+  
+          <ul class="navbar-nav ms-auto list-group ">
+  
+           
+          
+  
+          <!-- <ul class="navbar-nav">
+                   
+                   </ul> -->
+  
+          <li class="nav-item list-group-item">
+            <a class="nav-link" href="">My Chat</a>
+          </li>
+          <li class="nav-item list-group-item">
+            <a class="nav-link" href="">Sell</a>
+          </li>
+          <li class="nav-item list-group-item">
+            <a class="nav-link" href="#footer-id">About Us</a>
+          </li>
+  
+          
+        </ul>
+          
+          </div>
+        </div>
+      </div>
     </nav>
 
   </div>
