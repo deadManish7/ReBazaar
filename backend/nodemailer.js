@@ -152,7 +152,10 @@ let subjectM ,textM, htmlM;
 
     subjectM = `Sell Request Received`;
     htmlM = `<pre><h1>Welcome to ReBazaar</h1>
-<h3>Greetings ${user.Name} ! Your sell request has been received . We will reach back to you after verification . Thanks for your trust and support .</h3><h3>Your item details are :
+<h3>Greetings ${user.Name} ! Your sell request has been received . We will reach back to you after verification . Thanks for your trust and support .
+
+
+Your item details are :
 
 Name - ${item.Name}
 Price - ${item.Price}
@@ -236,6 +239,7 @@ let subjectM ,textM, htmlM;
     subjectM = `Sell Request Approved`;
     htmlM = `<pre><h1>Welcome to ReBazaar</h1>
 <h3>Greetings ${user.Name} ! Your sell request has been approved. You can see your item on our website. Thanks for your trust and support.
+
 
 The item details are :
 

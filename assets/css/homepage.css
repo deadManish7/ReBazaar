@@ -9,6 +9,7 @@ body{
     flex-direction: column;
 }
 
+
 .btn{
     
 }
@@ -101,9 +102,10 @@ li{
     color: black;
 }
 
-/* .userAction{
-    margin-top: 0.45rem;
-} */
+.userAction{
+    background: black;
+    border: none;
+}
 
 .nav-link{
     font-family: 'Sora', sans-serif;
@@ -138,6 +140,7 @@ li{
 
 .category{
     margin-left: 30%;
+    margin-right: 155%;
 }
 
 .homeImage{
@@ -267,10 +270,66 @@ footer{
 
 
 
+
   @media screen and (max-width: 900px) {
+
+    .imgDiv{
+        max-height: 26 rem;
+    }
+
+
+    pre{
+        font-size: .755em;
+    }
+
+    .userAction{
+        font-size: 1.7rem;
+    }
+
+    .navbar-brand{
+        font-size: 2.5rem;
+    }
+
+    .category{
+        background: black;
+        font-size: 1.7rem;
+        margin-right: 9%;
+        margin-left: 0%;
+    }
+
+    #categoryId{
+        font-size: 1.7rem;
+        background: black;
+    }
+
+    #navbarDropdownMenuLink{
+        font-size: 1.7rem;
+        color: white;
+    }
+
+    .nav-item{
+        background: white;
+    }
+
+    .nav-link{
+        font-size: 2.8rem;
+        color: black;
+        text-align: start;
+    }
+
+    .nav-link:hover {
+        text-align: center;
+        border: solid;
+        color: black;
+        border-radius: 15px;
+      }
 
     .navbar{
         height: 7vh;
+    }
+
+    .offcanvas-title{
+        font-size: 3.5rem;
     }
 
     .btn{
@@ -290,7 +349,7 @@ footer{
     }
 
     .itemImage{
-        height: -webkit-fill-available;
+        height: 26rem
     }
 
     .dropdown-item{
@@ -307,10 +366,13 @@ footer{
     
 
     #nextPage{
-        margin-top: 4.8%;
+        margin-top: 4.5%;
     }
 
     #footer-id{
         font-size: 1.5rem;
     }
   }
+
+
+
