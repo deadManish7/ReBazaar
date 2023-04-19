@@ -1,4 +1,5 @@
-const server="https://rebazaar.onrender.com";
+// const server="https://rebazaar.onrender.com";
+const server="https://rebazaar.vercel.app";
 
 function hideButton(){
     document.getElementById('alert').style.visibility='hidden';
