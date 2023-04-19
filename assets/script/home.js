@@ -1,5 +1,5 @@
 // const server="https://rebazaar.onrender.com";
-const server="rebazaar-o88k7yvak-deadmanish7.vercel.app";
+const server="https://rebazaar-khcfibyof-deadmanish7.vercel.app";
 
 function getCookie(cname) {
     let name = cname + "=";
