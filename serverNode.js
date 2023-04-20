@@ -30,7 +30,7 @@ app.use(express.static(__dirname+"/assets"));
 const http = require('http').createServer(app);
 
 http.listen(PORT,()=>{
-    console.log("Server started succesfully ...");
+    console.log("Server started succesfully on" , port);
 });
 
 const signUpInRouter = require('./backend/signUpInRouter.js');
