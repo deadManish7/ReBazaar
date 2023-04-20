@@ -1,5 +1,5 @@
 // const server="https://rebazaar.onrender.com";
-const server="rebazaar-o88k7yvak-deadmanish7.vercel.app";
+const server="http://3.16.108.97:3000";
 
 function ValidateEmail(input) {
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
