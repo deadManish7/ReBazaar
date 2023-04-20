@@ -15,6 +15,7 @@ const {protectRoute} = require('./backend/protectRoute.js');
 const {returnId} = require('./backend/protectRoute.js');
 const {sellRequestMail, adminVerifyMail} = require('./backend/nodemailer');
 const path = require('path');
+const fs = require('fs');
 const PORT = process.env.PORT || 3000
 
 app.use(express.json());
@@ -27,9 +28,12 @@ app.use(cors(
 
 app.use(express.static(__dirname+"/assets"));
 
-const http = require('https').createServer(app);
+const https = require('https').createServer({
+    key : fs.readFileSync(path.join(__dirname,'certificates','key.pem')),
+    cert : fs.readFileSync(path.join(__dirname,'certificates','certificates.pem')),
+},app);
 
-http.listen(PORT,()=>{
+https.listen(PORT,()=>{
     console.log("Server started succesfully on" , PORT);
 });
 
@@ -97,7 +101,7 @@ app.post('/id',returnId);
 
 // Socket io code
 
-const io = require('socket.io')(http);
+const io = require('socket.io')(https);
 
 io.on('connection',(socket)=>{
     let roomData;
