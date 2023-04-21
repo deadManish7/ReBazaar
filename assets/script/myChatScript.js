@@ -118,9 +118,11 @@ function onclick1(){
 }
 
 async function allFunctions(){
+    console.log('loading started');
     userId = await checkLoginForsell();
     await getRoom();
     onclick1();
+    console.log('loading end');
 }
 
 allFunctions();
