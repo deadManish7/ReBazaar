@@ -1,3 +1,5 @@
+const { log } = require("handlebars");
+
 // const server="https://rebazaar.onrender.com";
 const server="https://3.140.94.217:3000";
 
@@ -80,7 +82,9 @@ async function getRoom(){
     let data1 = {
         id : userId
     }
+    console.log('start');
     let roomRes = await axios.post(server+"/chat/myChats", data1);
+    console.log(roomRes.data);
 
     if(roomRes.data.length > 0){
         let roomData = roomRes.data;
@@ -95,6 +99,8 @@ async function getRoom(){
         <h1 class="noHeading">No Chats to show right now.</h1>
     </div>`
     }
+
+    console.log('completed');
 }
 
 let userId;
