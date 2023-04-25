@@ -33,6 +33,8 @@ app.use(express.static(__dirname+"/assets"));
 //     cert : fs.readFileSync(path.join(__dirname,'certificates','certificates.pem')),
 // },app);
 
+const http = require('http').createServer({},app);
+
 http.listen(PORT,()=>{
     console.log("Server started succesfully on" , PORT);
 });
