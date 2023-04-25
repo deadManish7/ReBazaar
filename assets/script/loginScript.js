@@ -1,5 +1,5 @@
 // const server="https://rebazaar.onrender.com";
-const server="http://3.131.194.227";
+const server="https://3.131.194.227";
 
 function ValidateEmail(input) {
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
