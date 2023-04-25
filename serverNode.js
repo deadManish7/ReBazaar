@@ -22,20 +22,20 @@ app.use(express.json());
 // app.use(express.urlencoded());
 app.use(cors(
    {credentials :true,
-    origin: ['http://127.0.0.1:5500','http://127.0.0.1:5501','http://127.0.0.1:5502','http://3.140.94.217','http://3.140.94.217:3000','https://3.140.94.217:3000','https://3.140.94.217']}
+    origin: ['https://127.0.0.1:5500','https://127.0.0.1:5501','https://127.0.0.1:5502','https://3.140.94.217','https://3.140.94.217:3000','httpss://3.140.94.217:3000','httpss://3.140.94.217']}
 ));
 // app.use(flash);
 
 app.use(express.static(__dirname+"/assets"));
 
-// const https = require('https').createServer({
-//     key : fs.readFileSync(path.join(__dirname,'certificates','key.pem')),
-//     cert : fs.readFileSync(path.join(__dirname,'certificates','certificates.pem')),
-// },app);
+const https = require('https').createServer({
+    key : fs.readFileSync(path.join(__dirname,'certificates','key.pem')),
+    cert : fs.readFileSync(path.join(__dirname,'certificates','certificates.pem')),
+},app);
 
-const http = require('http').createServer({},app);
+// const https = require('https').createServer({},app);
 
-http.listen(PORT,()=>{
+https.listen(PORT,()=>{
     console.log("Server started succesfully on" , PORT);
 });
 
@@ -103,7 +103,7 @@ app.post('/id',returnId);
 
 // Socket io code
 
-const io = require('socket.io')(http);
+const io = require('socket.io')(https);
 
 io.on('connection',(socket)=>{
     let roomData;
