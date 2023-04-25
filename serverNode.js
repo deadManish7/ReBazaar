@@ -22,7 +22,7 @@ app.use(express.json());
 // app.use(express.urlencoded());
 app.use(cors(
    {credentials :true,
-    origin: ['http://127.0.0.1:5500','http://127.0.0.1:5501','http://127.0.0.1:5502','http://3.140.94.217','http://3.140.94.217:3000/']}
+    origin: ['http://127.0.0.1:5500','http://127.0.0.1:5501','http://127.0.0.1:5502','http://3.140.94.217','http://3.140.94.217:3000','https://3.140.94.217:3000','https://3.140.94.217']}
 ));
 // app.use(flash);
 
