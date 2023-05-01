@@ -28,12 +28,12 @@ app.use(cors(
 
 app.use(express.static(__dirname+"/assets"));
 
-const http = require('https').createServer({
-    key : fs.readFileSync(path.join(__dirname,'certificates','key.pem')),
-    cert : fs.readFileSync(path.join(__dirname,'certificates','certificates.pem')),
-},app);
+// const http = require('https').createServer({
+//     key : fs.readFileSync(path.join(__dirname,'certificates','key.pem')),
+//     cert : fs.readFileSync(path.join(__dirname,'certificates','certificates.pem')),
+// },app);
 
-// const http = require('https').createServer({},app);
+const http = require('http').createServer({},app);
 
 http.listen(PORT,()=>{
     console.log("Server started succesfully on" , PORT);
