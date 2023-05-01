@@ -16,7 +16,7 @@ const {returnId} = require('./backend/protectRoute.js');
 const {sellRequestMail, adminVerifyMail} = require('./backend/nodemailer');
 const path = require('path');
 const fs = require('fs');
-const PORT = process.env.PORT
+const PORT = 3000 || process.env.PORT
 
 app.use(express.json());
 // app.use(express.urlencoded());
