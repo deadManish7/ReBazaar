@@ -83,6 +83,7 @@ app.post('/sell',upload,async function(req,res)
 {
 
     try{
+
     let item_complete={
         Name : req.body.itemName,
         Price : req.body.itemPrice,
@@ -90,7 +91,7 @@ app.post('/sell',upload,async function(req,res)
         ImagePath : req.file.filename,
         Category : req.body.categoryName,
         SellerId : req.body.seller,
-        ItemDate : new Date().toLocaleDateString(),
+        ItemDate : new Date().toLocaleDateString('en-GB'),
         ItemTime : Date.now()
     }
         let db_item = await itemModel.create(item_complete);

@@ -10,7 +10,7 @@ function hideButton(){
 
 btn.addEventListener('click', async function (e) {
     e.preventDefault();
-    swal("Wait!", "Otp is being verified.", "success");
+    swal("Wait!", "Otp is being verified.", "wait");
 
     let otp = document.getElementById("pass").value;
 

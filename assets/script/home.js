@@ -31,8 +31,7 @@ async function getHome() {
         if (resp.data.Name) {
             isLogin = true;
             userName = firstName(resp.data.Name);
-            let fullName = resp.data.Name;
-            document.getElementById("carouselUser").textContent = "Greetings "+userName +" !";
+            document.getElementById("carouselUser").textContent = "Greetings "+resp.data.name +" !";
             let listItem = document.getElementById("userDropdown");
             let markup;
 
@@ -40,7 +39,7 @@ async function getHome() {
                 markup = `
                 <a class="nav-link dropdown-toggle" href="" id="userName-id" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                ${fullName}
+                ${userName}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" onclick="myItemload()">My Items</a></li>
@@ -55,7 +54,7 @@ async function getHome() {
                 markup = `
             <a class="nav-link dropdown-toggle" href="" id="userName-id" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
-            ${fullName}
+            ${userName}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" onclick="myItemload()">My Items</a></li>
@@ -274,7 +273,6 @@ async function contactEvent() {
             else {
                 swal('Info', 'Please maintain the decorum of chatroom. Your chat will be monitored.', 'info');
 
-                setTimeout(async () => {
                     let item = contactElements[i].value;
                     let itemId = contactElements[i].id;
 
@@ -331,9 +329,9 @@ async function contactEvent() {
 
                     window.location.href = "/chat?room=" + roomId + "&seller=" + seller + "&buyer=" + userId + "&name=" + senderName + "&u=" + uB + "&i=" + iB;
                 }
-                    , 2000)
 
-            }
+
+            
         })
     }
 }
