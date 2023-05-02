@@ -279,7 +279,7 @@ async function contactEvent() {
                     text: "Please maintain the decorum of chatroom. Your chat will be monitored. !",
                     buttons: false,
                     allowOutsideClick: false,
-                    timer : 2000
+                    timer : 3000
                 });
 
                     let item = contactElements[i].value;
