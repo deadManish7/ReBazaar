@@ -109,6 +109,15 @@ submitBtn.addEventListener('click', function () {
 
           if (isImage(name)) {
             swal("Success", "Sell request has been received . We will inform you through email soon after verification . Thanks for your patience .", "success");
+
+            swal({
+              title: "Success",
+              icon: "success",
+              text: "Sell request has been received . We will inform you through email soon after verification . Thanks for your patience .Please wait. OTP is being verified.",
+              buttons: false,
+              allowOutsideClick: false,
+          });
+
             setTimeout(() => {
               document.getElementById('form-id').submit();
             }, 3500);

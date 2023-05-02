@@ -47,7 +47,13 @@ btn.addEventListener('click', async function (e) {
     }
 
     else {
-        swal("Wait!", "Please wait. You will be redirected to OTP page in few moments. We thank you for your patience. ", "info");
+        swal({
+            title: "Please Wait ",
+            icon: "info",
+            text: "You will be redirected to OTP page in few moments. We thank you for your patience.",
+            buttons: false,
+            allowOutsideClick: false,
+        });
 
         let userData = {
             Name: name1,

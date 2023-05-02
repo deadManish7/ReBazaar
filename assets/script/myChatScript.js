@@ -119,6 +119,7 @@ async function allFunctions(){
         icon: "info",
         text: "Chats are being loaded !",
         buttons: false,
+        allowOutsideClick: false,
         timer : 2000
     });
     userId = await checkLoginForsell();

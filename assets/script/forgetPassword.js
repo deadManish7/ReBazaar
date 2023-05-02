@@ -23,7 +23,14 @@ let btn = document.getElementById("submitB");
 btn.addEventListener('click', async function (e) {
     e.preventDefault();
 
-    swal("WAIT", "Please wait. OTP is being sent. We thank you for your patience.", "info");
+
+    swal({
+        title: "Please Wait ",
+        icon: "info",
+        text: "OTP is being sent. We thank you for your patience.",
+        allowOutsideClick: false,
+        buttons: false,
+    });
 
     let email1 = document.getElementById('name1').value;
 
@@ -48,7 +55,13 @@ btn.addEventListener('click', async function (e) {
         }
 
         else if (res1.data == "2") {
-            swal("WAIT ", "Please wait.You will be redirected to OTP page in few moments.", "info");
+            swal({
+                title: "Please Wait ",
+                icon: "info",
+                text: "You will be redirected to OTP page in few moments.",
+                buttons: false,
+                allowOutsideClick: false,
+            });
             setTimeout(() => {
                 window.location.href = "/otpForgetPass";
             }, 2000);

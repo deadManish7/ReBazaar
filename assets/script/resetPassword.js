@@ -6,7 +6,13 @@ let btn = document.getElementById("submitB");
 btn.addEventListener('click', async function (e) {
     e.preventDefault();
 
-    swal("WAIT" ,"Please wait. Password is being updated.", "info");
+    swal({
+        title: "Please Wait ",
+        icon: "info",
+        text: "Password is being updated.",
+        buttons: false,
+        allowOutsideClick: false,
+    });
 
 
     let password1 = document.getElementById('pass').value;
