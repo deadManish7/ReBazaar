@@ -1,3 +1,5 @@
+const { default: swal } = require("sweetalert");
+
 // const server="https://rebazaar.onrender.com";
 const server="https://rebazaar.store";
 
@@ -80,9 +82,8 @@ async function getRoom(){
     let data1 = {
         id : userId
     }
-    console.log('start');
+
     let roomRes = await axios.post(server+"/chat/myChats", data1);
-    console.log(roomRes.data);
 
     if(roomRes.data.length > 0){
         let roomData = roomRes.data;
@@ -98,7 +99,6 @@ async function getRoom(){
     </div>`
     }
 
-    console.log('completed');
 }
 
 let userId;
@@ -116,11 +116,16 @@ function onclick1(){
 }
 
 async function allFunctions(){
-    console.log('loading started');
+    swal({
+        title: "Please Wait ",
+        text: "My Chats take some time to load !",
+        icon: "wait",
+        buttons: false,
+        timer : 2000
+    });
     userId = await checkLoginForsell();
     await getRoom();
     onclick1();
-    console.log('loading end');
 }
 
 allFunctions();
