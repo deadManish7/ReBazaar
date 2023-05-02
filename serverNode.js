@@ -39,6 +39,8 @@ http.listen(PORT,()=>{
     console.log("Server started succesfully on" , PORT);
 });
 
+app.listen()
+
 
 const signUpInRouter = require('./backend/signUpInRouter.js');
 app.use('/',signUpInRouter);
@@ -182,8 +184,8 @@ app.post('/name',async function (req,res){
     
 })
 
-app.get('/.well-known/pki-validation/D763041FB13CAA54BCD2F685E56143B3.txt',(req,res)=>{
-    res.sendFile(path.resolve("D763041FB13CAA54BCD2F685E56143B3.txt"));
+app.get('/.well-known/pki-validation/B22DB2D7E8EA5E57D85F766744A771DD.txt',(req,res)=>{
+    res.sendFile(path.resolve("B22DB2D7E8EA5E57D85F766744A771DD.txt"));
 })
 
 
