@@ -1,5 +1,5 @@
 // const server="https://rebazaar.onrender.com";
-const server="https://rebazaar.store";
+const server = "https://rebazaar.store";
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -31,15 +31,15 @@ async function getHome() {
         if (resp.data.Name) {
             isLogin = true;
             userName = firstName(resp.data.Name);
-            document.getElementById("carouselUser").textContent = "Greetings "+resp.data.Name +" !";
+            document.getElementById("carouselUser").textContent = "Greetings " + resp.data.Name + " !";
             let listItem = document.getElementById("userDropdown");
             let markup;
 
             if (getCookie('admin')) {
                 markup = `
-                <a class="nav-link dropdown-toggle" href="" id="userName-id" role="button"
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                ${userName}
+                <strong>${userName}</strong>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" onclick="myItemload()">My Items</a></li>
@@ -52,9 +52,9 @@ async function getHome() {
 
             else {
                 markup = `
-            <a class="nav-link dropdown-toggle" href="" id="userName-id" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            ${userName}
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <strong>${userName}</strong>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" onclick="myItemload()">My Items</a></li>
@@ -94,8 +94,8 @@ async function getHome() {
         resp = await axios.get(server + "/home");
     }
 
-    if(resp.data.content){
-    db_arr = resp.data.content;
+    if (resp.data.content) {
+        db_arr = resp.data.content;
     }
 
     return db_arr;
@@ -119,12 +119,12 @@ function finalPage() {
 
 async function allFunctions() {
     db_arr = await getHome();
-    if(db_arr.length < 1){
+    if (db_arr.length < 1) {
         console.log('manish');
         document.getElementById('ItemsInfo').innerHTML = `
         <div class="noItemDiv"><h1 class="noHeading">No Items here right now. Please retry later. </h1></div>`
     }
-    else{
+    else {
         finalPage();
         contactEvent()
     }
@@ -274,78 +274,79 @@ async function contactEvent() {
                 // swal('Info', 'Please maintain the decorum of chatroom. Your chat will be monitored.', 'info');
 
                 swal({
-                    title: "Terms for Chat", 
+                    title: "Terms for Chat",
                     icon: "info",
                     text: "Please maintain the decorum of chatroom. Your chat will be monitored. !",
                     buttons: false,
                     allowOutsideClick: false,
-                    timer : 3000
+                    timer: 3000
                 });
 
-                    let item = contactElements[i].value;
-                    let itemId = contactElements[i].id;
+                let item = contactElements[i].value;
+                let itemId = contactElements[i].id;
 
-                    let userData = {
+                let userData = {
+                    Seller: seller,
+                    Buyer: userId,
+                    Item: itemId
+                }
+                let resp2 = await axios.post(server + '/chat', userData);
+
+                let roomId;
+
+                if (resp2.data == "0") {
+                    roomId = Date.now();
+
+
+
+                    let contactInfo = {
                         Seller: seller,
                         Buyer: userId,
-                        Item: itemId
-                    }
-                    let resp2 = await axios.post(server + '/chat', userData);
-
-                    let roomId;
-
-                    if (resp2.data == "0") {
-                        roomId = Date.now();
-
-
-
-                        let contactInfo = {
-                            Seller: seller,
-                            Buyer: userId,
-                            RoomId: roomId,
-                            Item: item,
-                            ItemId: itemId
-                        }
-
-                        let resp3 = await axios.post(server + '/chat/addRoom', contactInfo);
-
-                        if (resp3.data == '0') {
-                            alert("Some error occured . Please try after some time.")
-                            window.location.href = "/";
-                        }
-                    }
-
-                    else {
-                        roomId = resp2.data;
-                    }
-
-                    let data5 = {
-                        SellerId: seller
-                    }
-                    let resp4 = await axios.post(server + '/name', data5);
-                    let senderName;
-                    if (resp4.data) {
-                        senderName = resp4.data;
-                    }
-
-                    let data6 = {
                         RoomId: roomId,
-                        User: userId
+                        Item: item,
+                        ItemId: itemId
                     }
-                    let resp5 = await axios.post(server + '/chat/blockStatus', data6);
-                    let uB = resp5.data.UBlocked;
-                    let iB = resp5.data.IBlocked;
 
-                    window.location.href = "/chat?room=" + roomId + "&seller=" + seller + "&buyer=" + userId + "&name=" + senderName + "&u=" + uB + "&i=" + iB;
+                    let resp3 = await axios.post(server + '/chat/addRoom', contactInfo);
+
+                    if (resp3.data == '0') {
+                        alert("Some error occured . Please try after some time.")
+                        window.location.href = "/";
+                    }
                 }
 
+                else {
+                    roomId = resp2.data;
+                }
 
-            
+                let data5 = {
+                    SellerId: seller
+                }
+                // let resp4 = await axios.post(server + '/name', data5);
+                // let senderName;
+                // if (resp4.data) {
+                //     senderName = resp4.data;
+                // }
+
+
+                let data6 = {
+                    RoomId: roomId,
+                    User: userId
+                }
+                let resp5 = await axios.post(server + '/chat/blockStatus', data6);
+                let uB = resp5.data.UBlocked;
+                let iB = resp5.data.IBlocked;
+
+                window.location.href = "/chat?room=" + roomId + "&seller=" + seller + "&buyer=" + userId + "&name=" + userName + "&u=" + uB + "&i=" + iB;
+            }
+
+
+
         })
     }
 }
 
-function firstName(str){
+function firstName(str) {
     let words = str.split(" ");
     let firstWord = words[0];
 
