@@ -31,7 +31,7 @@ async function getHome() {
         if (resp.data.Name) {
             isLogin = true;
             userName = firstName(resp.data.Name);
-            document.getElementById("carouselUser").textContent = "Greetings "+resp.data.name +" !";
+            document.getElementById("carouselUser").textContent = "Greetings "+resp.data.Name +" !";
             let listItem = document.getElementById("userDropdown");
             let markup;
 
