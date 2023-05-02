@@ -103,6 +103,7 @@ li{
 }
 
 .userAction{
+    width: 97.81px;
     background: black;
     border: none;
 }
@@ -139,13 +140,17 @@ li{
 }
 
 .category{
-    margin-left: 30%;
-    margin-right: 155%;
+    margin-left: 10%;
+    margin-right: 205%;
 }
 
 .homeImage{
     width: 100%;
     height: 150px;
+}
+
+#loginId{
+
 }
 
 #title{
@@ -263,6 +268,10 @@ footer{
     border: none;
 }
 
+hr{
+
+}
+
 
 /* @media screen and (max-width: 900px)  {
 
@@ -275,6 +284,11 @@ footer{
 
     .imgDiv{
         max-height: 26 rem;
+    }
+
+    #loginId{
+        color: white;
+        font-size: 1.7rem;
     }
 
 
@@ -293,8 +307,8 @@ footer{
     .category{
         background: black;
         font-size: 1.7rem;
-        margin-right: 9%;
-        margin-left: 0%;
+        margin-right: 15%;
+        margin-left: -12%;
     }
 
     #categoryId{
@@ -326,6 +340,14 @@ footer{
 
     .navbar{
         height: 7vh;
+    }
+
+    hr{
+        color: black;
+        opacity: 10;
+        size: 10px;
+        border-width: 15px;
+        border: solid;
     }
 
     .offcanvas-title{
@@ -371,6 +393,10 @@ footer{
 
     #footer-id{
         font-size: 1.5rem;
+    }
+
+    #closeId{
+        font-size: 3rem;
     }
   }
 
