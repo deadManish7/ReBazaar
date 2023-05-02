@@ -1,5 +1,5 @@
 // const server="https://rebazaar.onrender.com";
-const server="http://3.131.194.227";
+const server="https://rebazaar.store";
 
 function hideButton(){
     document.getElementById('alert').style.visibility='hidden';

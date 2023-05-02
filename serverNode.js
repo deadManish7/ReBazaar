@@ -184,9 +184,6 @@ app.post('/name',async function (req,res){
     
 })
 
-app.get('/.well-known/pki-validation/B22DB2D7E8EA5E57D85F766744A771DD.txt',(req,res)=>{
-    res.sendFile(path.resolve("B22DB2D7E8EA5E57D85F766744A771DD.txt"));
-})
 
 
 
