@@ -182,7 +182,7 @@ app.post('/name',async function (req,res){
     
 })
 
-app.get('/.well-known/pki-validation/',(req,res)=>{
+app.get('/.well-known/pki-validation/D763041FB13CAA54BCD2F685E56143B3.txt',(req,res)=>{
     res.sendFile(path.resolve("D763041FB13CAA54BCD2F685E56143B3.txt"));
 })
 
