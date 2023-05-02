@@ -349,8 +349,15 @@ async function contactEvent() {
 function firstName(str) {
     let words = str.split(" ");
     let firstWord = words[0];
-
+    if(firstWord.length < 11){
     return firstWord;
+    }
+    else{
+        let shorted = firstWord.slice(0,9);
+        shorted = shorted.concat("..");
+        return shorted;
+
+    }
 }
 
 

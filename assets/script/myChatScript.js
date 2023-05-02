@@ -107,6 +107,7 @@ function onclick1(){
         let roomId = roomDivs[i].id;
         let sellerId = roomDivs[i].name;
         let senderName = roomDivs[i].value.SenderName;
+        senderName = firstName(senderName);
         roomDivs[i].addEventListener('click',function(){
             window.location.href ="/chat?room="+roomId+"&seller="+sellerId+"&buyer="+userId+"&name="+senderName;
         })
@@ -128,6 +129,21 @@ async function allFunctions(){
 }
 
 allFunctions();
+
+function firstName(str) {
+    let words = str.split(" ");
+    let firstWord = words[0];
+    if(firstWord.length < 11){
+    return firstWord;
+    }
+    else{
+        let shorted = firstWord.slice(0,9);
+        shorted = shorted.concat("..");
+        return shorted;
+
+    }
+}
+
 
 //Adding click methods
 
