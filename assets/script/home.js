@@ -271,7 +271,16 @@ async function contactEvent() {
             }
 
             else {
-                swal('Info', 'Please maintain the decorum of chatroom. Your chat will be monitored.', 'info');
+                // swal('Info', 'Please maintain the decorum of chatroom. Your chat will be monitored.', 'info');
+
+                swal({
+                    title: "Terms for Chat", 
+                    icon: "info",
+                    text: "Please maintain the decorum of chatroom. Your chat will be monitored. !",
+                    buttons: false,
+                    allowOutsideClick: false,
+                    timer : 2000
+                });
 
                     let item = contactElements[i].value;
                     let itemId = contactElements[i].id;
