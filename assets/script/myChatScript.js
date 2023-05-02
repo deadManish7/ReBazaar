@@ -117,7 +117,7 @@ async function allFunctions(){
     swal({
         title: "Please Wait ",
         icon: "info",
-        text: "My Chats take some time to load !",
+        text: "Chats are being loaded !",
         buttons: false,
         timer : 2000
     });
