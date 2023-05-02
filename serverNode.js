@@ -1,5 +1,6 @@
 const express = require("express");
 const app= express();
+const app2 = express();
 
 const cookieparser = require('cookie-parser');
 app.use(cookieparser());
@@ -17,6 +18,7 @@ const {sellRequestMail, adminVerifyMail} = require('./backend/nodemailer');
 const path = require('path');
 const fs = require('fs');
 const PORT = 3000 || process.env.PORT
+const PORT2 = 3001 || process.env.PORT
 
 app.use(express.json());
 // app.use(express.urlencoded());
@@ -33,13 +35,20 @@ const http = require('https').createServer({
     cert : fs.readFileSync(path.join(__dirname,'sslCert','certificate.crt')),
 },app);
 
-// const http = require('http').createServer({},app);
+const http2 = require('http').createServer({},app2);
 
 http.listen(PORT,()=>{
-    console.log("Server started succesfully on" , PORT);
+    console.log("HTTPS Server started succesfully on" , PORT);
 });
 
-app.listen()
+http2.listen(PORT2,()=>{
+    console.log("HTTP Server started succesfully on" , PORT2);
+})
+
+// For redirecting http to https
+app2.get('/',(req,res)=>{
+    res.redirect("https://rebazaar.store")
+})
 
 
 const signUpInRouter = require('./backend/signUpInRouter.js');
