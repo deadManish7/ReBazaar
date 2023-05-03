@@ -322,11 +322,12 @@ async function contactEvent() {
                 let data5 = {
                     SellerId: seller
                 }
-                // let resp4 = await axios.post(server + '/name', data5);
-                // let senderName;
-                // if (resp4.data) {
-                //     senderName = resp4.data;
-                // }
+                let resp4 = await axios.post(server + '/name', data5);
+                let senderName;
+                if (resp4.data) {
+                    senderName = resp4.data;
+                }
+                senderName = firstName(senderName);
 
 
                 let data6 = {
@@ -337,7 +338,7 @@ async function contactEvent() {
                 let uB = resp5.data.UBlocked;
                 let iB = resp5.data.IBlocked;
 
-                window.location.href = "/chat?room=" + roomId + "&seller=" + seller + "&buyer=" + userId + "&name=" + userName + "&u=" + uB + "&i=" + iB;
+                window.location.href = "/chat?room=" + roomId + "&seller=" + seller + "&buyer=" + userId + "&name=" + senderName + "&u=" + uB + "&i=" + iB;
             }
 
 
