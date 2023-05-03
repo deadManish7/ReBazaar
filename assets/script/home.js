@@ -276,7 +276,7 @@ async function contactEvent() {
                 swal({
                     title: "Terms for Chat",
                     icon: "info",
-                    text: "Please maintain the decorum of chatroom. Your chat will be monitored. !",
+                    text: "Please maintain the decorum of chatroom. Your chat will be monitored.",
                     buttons: false,
                     allowOutsideClick: false,
                     timer: 3000
