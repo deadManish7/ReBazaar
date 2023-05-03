@@ -44,7 +44,6 @@ async function getHome() {
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" onclick="myItemload()">My Items</a></li>
                 <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
-                <li><a class="dropdown-item" onclick="deleteuser()">Delete Account</a></li>
                 <li><a class="dropdown-item" href="/admin">Admin Panel</a></li>
               </ul>
             </li>`;
@@ -59,7 +58,6 @@ async function getHome() {
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" onclick="myItemload()">My Items</a></li>
             <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
-            <li><a class="dropdown-item" onclick="deleteuser()">Delete Account</a></li>
           </ul>
         </li>`;
             }
@@ -271,7 +269,6 @@ async function contactEvent() {
             }
 
             else {
-                // swal('Info', 'Please maintain the decorum of chatroom. Your chat will be monitored.', 'info');
 
                 swal({
                     title: "Terms for Chat",
