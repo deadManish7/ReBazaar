@@ -81,7 +81,6 @@ async function postSignIn(req,res){
             else {
                 let uid = db_search_user._id;
                 let token = jwt.sign({payload : uid},jwt_key);
-                res.cookie("isLoggedIn",token); 
                 res.json({
                     jwt : token,
                     code : 2

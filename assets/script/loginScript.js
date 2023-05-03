@@ -61,7 +61,7 @@ btn.addEventListener('click', async function (e) {
 
             swal("SUCCESS", "User Signed In Successfully.", "success");
 
-            document.cookie=("token="+res1.data.jwt+";path=/;" );
+            document.cookie=("token ="+res1.data.jwt+"; path=/;max-age="+(86400*3));
 
             setTimeout(()=>{
                 window.location.href = "/";
