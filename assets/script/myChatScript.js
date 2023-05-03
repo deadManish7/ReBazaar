@@ -121,7 +121,7 @@ async function allFunctions(){
         text: "Chats are being loaded !",
         buttons: false,
         allowOutsideClick: false,
-        timer : 2000
+        timer : 2500
     });
     userId = await checkLoginForsell();
     await getRoom();
