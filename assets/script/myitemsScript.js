@@ -48,7 +48,7 @@ function createDiv(itemId,image_path1,name,price,description,date){
 
     child.className='col col-lg-6 col-sm-12';
 
-    child.innerHTML = `<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4 col-sm-5" style="text-align: center;"><img src= ${image_path1} alt="Not Found"  class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8 col-sm-7"><div class="card-body"><h5 class="card-title">₹ ${price}</h5><h6 class="item-name">${name}</h6><p class="card-text">${description}</p><p class="card-text"><small class="">${date} </small></p><button value= ${name} id=${itemId}type="button" class="btn btn-md btn-success contact delete "> Delete Item </button></div></div></div></div>`
+    child.innerHTML = `<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4 col-sm-5" style="text-align: center;"><img src= ${image_path1} alt="Not Found"  class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8 col-sm-7"><div class="card-body"><h5 class="card-title">₹ ${price}</h5><h6 class="item-name">${name}</h6><p class="card-text">${description}</p><p class="card-text"><small class="">${date} </small></p><button value= ${name} id=${itemId} type="button" class="btn btn-md btn-success contact delete "> Delete Item </button></div></div></div></div>`
 
     parent.appendChild(child);
 }
@@ -79,6 +79,7 @@ async function deleteEvent(){
                     if (willDelete) {
 
                         let object_name = deleteItemElements[i].id;
+                        console.log(object_name);
     
                         let item = {
                             Name : (object_name)
