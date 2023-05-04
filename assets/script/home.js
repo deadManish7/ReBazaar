@@ -100,6 +100,7 @@ async function getHome() {
 }
 
 function createDiv(image_path1, name, price, description, date, seller, itemId) {
+    console.log(name);
     let parent = document.getElementById("row-id");
     let child = document.createElement('div');
     child.className = 'col col-lg-6 col-sm-12';
@@ -112,13 +113,13 @@ function createDiv(image_path1, name, price, description, date, seller, itemId) 
 function finalPage() {
     for (i = 0; i < db_arr.length; i++) {
         createDiv(("/imagesInDB/" + db_arr[i].ImagePath), db_arr[i].Name, db_arr[i].Price, db_arr[i].Description, db_arr[i].ItemDate, db_arr[i].SellerId, db_arr[i]._id);
+        
     }
 }
 
 async function allFunctions() {
     db_arr = await getHome();
     if (db_arr.length < 1) {
-        console.log('manish');
         document.getElementById('ItemsInfo').innerHTML = `
         <div class="noItemDiv"><h1 class="noHeading">No Items here right now. Please retry later. </h1></div>`
     }
@@ -254,7 +255,6 @@ async function contactEvent() {
     let contactElements = document.getElementsByClassName("contact");
     for (let i = 0; i < contactElements.length; i++) {
 
-        console.log(contactElements[i].value);
         contactElements[i].addEventListener('click', async function (e) {
 
             let seller = contactElements[i].name;
