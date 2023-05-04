@@ -254,6 +254,7 @@ async function contactEvent() {
     let contactElements = document.getElementsByClassName("contact");
     for (let i = 0; i < contactElements.length; i++) {
 
+        print(contactElements[i].value);
         contactElements[i].addEventListener('click', async function (e) {
 
             let seller = contactElements[i].name;
