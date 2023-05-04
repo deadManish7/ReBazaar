@@ -44,6 +44,10 @@ homeRouter
     .get(getBookspage)
 
 homeRouter
+    .route('/home/sports')
+    .get(getSportspage)
+
+homeRouter
     .route('/deleteInfo')
     .post(protectRoute, deleteInfoF)
 
@@ -127,6 +131,21 @@ async function getVehiclepage(req, res) {
 
 async function getBookspage(req, res) {
     let items = await itemModel.find({ IsVerified: true, Category: "Books" });
+
+    if (items) {
+        items.sort(compare);
+        res.json({
+            content: items
+        });
+    }
+
+    else {
+        res.send("0");//Not found
+    }
+}
+
+async function getSportspage(req, res) {
+    let items = await itemModel.find({ IsVerified: true, Category: "Sports" });
 
     if (items) {
         items.sort(compare);

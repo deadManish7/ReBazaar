@@ -88,6 +88,9 @@ async function getHome() {
         else if (category == 'Books') {
             resp = await axios.get(server + "/home/books");
         }
+        else if (category == 'Sports') {
+            resp = await axios.get(server + "/home/books");
+        }
     }
     else {
         resp = await axios.get(server + "/home");
