@@ -254,10 +254,10 @@ async function checkNewMsg() {
 async function contactEvent() {
     let contactElements = document.getElementsByClassName("contact");
     for (let i = 0; i < contactElements.length; i++) {
-        console.log(contactElements[i].name);
+
         contactElements[i].addEventListener('click', async function (e) {
 
-            let seller = contactElements[i].name;
+            let seller = contactElements[i].value;
 
             if (userId == "0") {
                 swal("OOPS!", "Please login first to chat with seller .", "error");
@@ -280,7 +280,7 @@ async function contactEvent() {
                     timer: 3000
                 });
 
-                let item = contactElements[i].value;
+                let item = contactElements[i].name;
                 let itemId = contactElements[i].id;
 
                 let userData = {
