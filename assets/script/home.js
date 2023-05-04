@@ -100,7 +100,6 @@ async function getHome() {
 }
 
 function createDiv(image_path1, name, price, description, date, seller, itemId) {
-    console.log(name);
     let parent = document.getElementById("row-id");
     let child = document.createElement('div');
     child.className = 'col col-lg-6 col-sm-12';
