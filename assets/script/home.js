@@ -43,6 +43,7 @@ async function getHome() {
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" onclick="myItemload()">My Items</a></li>
+                <li><a class="dropdown-item" onclick="sellLogin()">Sell Item</a></li>
                 <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
                 <li><a class="dropdown-item" href="/admin">Admin Panel</a></li>
               </ul>

@@ -60,7 +60,7 @@ function createRoomDiv(senderName,item,roomId,senderId,iblocked,ublocked,lastMsg
     if(lastMsg > dcTime){
         markup =`
         <i class="fa-solid fa-user"></i> 
-        <span ><strong>${senderName}</strong> (Unread Messages)</span>
+        <span ><strong>${senderName}</strong> (Unread)</span>
         <span class="item">Item : <strong>${item}<strong></span>
         `
     }
