@@ -78,7 +78,7 @@ async function deleteEvent(){
                 .then(async (willDelete) => {
                     if (willDelete) {
 
-                        let object_name = deleteItemElements[i].name;
+                        let object_name = deleteItemElements[i].id;
     
                         let item = {
                             Name : (object_name)
