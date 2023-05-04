@@ -121,7 +121,7 @@ async function allFunctions() {
     db_arr = await getHome();
     if (db_arr.length < 1) {
         document.getElementById('ItemsInfo').innerHTML = `
-        <div class="noItemDiv"><h1 class="noHeading">No Items here right now. Please retry later. </h1></div>`
+        <div class="noItemDiv"><h1 class="noHeading">No Items here right now. Please check later. </h1></div>`
     }
     else {
         finalPage();
