@@ -105,7 +105,7 @@ function createDiv(image_path1, name, price, description, date, seller, itemId) 
     let child = document.createElement('div');
     child.className = 'col col-lg-6 col-sm-12';
 
-    child.innerHTML = `<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4 col-sm-5" style="text-align: center;"><img src= ${image_path1} alt="Not Found"  class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8 col-sm-7"><div class="card-body"><h5 class="card-title">₹ ${price}</h5><h6 class="item-name">${name}</h6><p class="card-text">${description}</p><p class="card-text"><small class="">${date} </small></p><button value= ${name} id=${itemId} name="${seller}" type="button" class="btn btn-md btn-success contact"><i class="fa-regular fa-message"></i> Chat with Seller</button></div></div></div></div>`;
+    child.innerHTML = `<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4 col-sm-5" style="text-align: center;"><img src= ${image_path1} alt="Not Found"  class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8 col-sm-7"><div class="card-body"><h5 class="card-title">₹ ${price}</h5><h6 class="item-name">${name}</h6><p class="card-text">${description}</p><p class="card-text"><small class="">${date} </small></p><button value= ${seller} id=${itemId} name="${name}" type="button" class="btn btn-md btn-success contact"><i class="fa-regular fa-message"></i> Chat with Seller</button></div></div></div></div>`;
 
     parent.appendChild(child);
 }
@@ -254,7 +254,7 @@ async function checkNewMsg() {
 async function contactEvent() {
     let contactElements = document.getElementsByClassName("contact");
     for (let i = 0; i < contactElements.length; i++) {
-
+        console.log(contactElements[i].name);
         contactElements[i].addEventListener('click', async function (e) {
 
             let seller = contactElements[i].name;
