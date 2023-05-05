@@ -23,13 +23,14 @@ Your credentials are :
 Email - ${data.Email}
 Password - ${data.Password}
 
+Click this link for accessing our website https://rebazaar.store .
 
 With Regards, 
 Team ReBazaar</h3></pre>`
         }
 
 let info = await transporter.sendMail({
-    from : 'ReBazaar "<rebaazarma@gmail.com>"',
+    from : 'ReBazaar "<rebazaar1@gmail.com>"',
     to : data.Email,
     subject : subjectM,
     html : htmlM
@@ -59,7 +60,7 @@ Team ReBazaar</h3></pre>`;
 
 
     let info = await transporter.sendMail({
-        from : 'ReBazaar "<rebaazarma@gmail.com>"',
+        from : 'ReBazaar "<rebazar1@gmail.com>"',
         to : email,
         subject : subjectM,
         html : htmlM
@@ -95,7 +96,7 @@ With Regards,
 Team ReBazaar</h3></pre>`;
 
 let info = await transporter.sendMail({
-    from : 'ReBazaar "<rebaazarma@gmail.com>"',
+    from : 'ReBazaar "<rebazaar1@gmail.com>"',
     to : data.Email,
     subject : subjectM,
     html : htmlM
@@ -126,7 +127,7 @@ With Regards,
 Team ReBazaar</h3></pre>`
 
 let info = await transporter.sendMail({
-    from : 'ReBazaar "<rebaazarma@gmail.com>"',
+    from : 'ReBazaar "<rebazaar1@gmail.com>"',
     to : data.Email,
     subject : subjectM,
     html : htmlM
@@ -168,7 +169,7 @@ Team ReBazaar</h3></pre>`
 
 
 let info = await transporter.sendMail({
-    from : 'ReBazaar "<rebaazarma@gmail.com>"',
+    from : 'ReBazaar "<rebazaar1@gmail.com>"',
     to : user.Email,
     subject : subjectM,
     html : htmlM
@@ -205,7 +206,7 @@ let subjectM ,textM, htmlM;
 
 
 let info1 = await transporter.sendMail({
-    from : 'ReBazaar "<rebaazarma@gmail.com>"',
+    from : 'ReBazaar "<rebazaar1@gmail.com>"',
     to : "deadmanish7@gmail.com",
     subject : subjectM,
     html : htmlM
@@ -213,7 +214,7 @@ let info1 = await transporter.sendMail({
 });
 
 let info2 = await transporter.sendMail({
-    from : 'ReBazaar "<rebaazarma@gmail.com>"',
+    from : 'ReBazaar "<rebazaar1@gmail.com>"',
     to : "12111080@nitkkr.ac.in",
     subject : subjectM,
     html : htmlM
@@ -248,13 +249,14 @@ Price - ${item.Price}
 Description - ${item.Description}
 Category - ${item.Category}
 
+Click this link for accessing our website https://rebazaar.store .
 
 With Regards, 
 Team ReBazaar</h3></pre>`
 
 
 let info1 = await transporter.sendMail({
-    from : 'ReBazaar "<rebaazarma@gmail.com>"',
+    from : 'ReBazaar "<rebazaar1@gmail.com>"',
     to : user.Email,
     subject : subjectM,
     html : htmlM
