@@ -211,7 +211,10 @@ async function remindMail1() {
 
     try {
 
-        let data = await roomIdModel.find({});
+        let data = await roomIdModel.find();
+        if(data.length == 0){
+            testEmail();
+        }
         for (i = 0; i < data.length; i++) {
             if (data[i].User1DcTime < LastMsgTime && (alreadySent.includes(data[i].User1) == false)) {
                 let user = userModel.findById(data[i].User1);
@@ -228,22 +231,21 @@ async function remindMail1() {
         }
     }
     catch (err) {
-
+        testEmail()
     }
     alreadySent.length = 0;
 
 }
 
 // //Testing email
-// async function testEmail(){
-// let user5 = {
-//     Name : 'Manish',
-//     Email : '',
-// }
+async function testEmail(){
+let user5 = {
+    Name : 'Manish Ni Chlra',
+    Email : 'deadmanish7@gmail.com',
+}
 
-// let res10 =  await chatRemindMail(user5);
-// console.log('Test result is : ',res10);
-// }
+let res10 =  await chatRemindMail(user5);
+}
 
 // testEmail();
 
