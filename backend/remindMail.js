@@ -8,14 +8,14 @@ module.exports.chatRemindMail=async function chatRemindMail(user) {
     secure: true, // true for 465, false for 587 and other ports
     auth: {
       user: "rebazaar2@gmail.com", // generated gmail user
-      pass: "iqfqqxpuyduqrrrz", // generated gmail password
+      pass: "rreuktabkclxravq", // generated gmail password
     },
   });
 
 let subjectM ,textM, htmlM;  
 
     subjectM = `Unread Messages`;
-    htmlM = `<pre><h2>Greetings ${user.Name} !<h2><h3>You have unread messages in your inbox. Please check when you have time .
+    htmlM = `<pre><h2>Greetings ${user.Name} !</h2><h3>You have unread messages in your inbox. Please check when you have time .
 
 Click this link for accessing our website https://rebazaar.store .
 
