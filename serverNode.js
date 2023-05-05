@@ -206,7 +206,7 @@ app.post('/name', async function (req, res) {
 //     remindMail1();
 // });
 
-remindMail1();
+// remindMail1();
 
 async function remindMail1() {
     let alreadySent = [];
