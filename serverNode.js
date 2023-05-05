@@ -278,7 +278,7 @@ async function deleteRedundantChat(){
             arr2 = arr2.filter(function(item) {
                 return item !== data[i].RoomId;
             })
-            user2 = await userModel.findByIdAndUpdate(data[i].User2,{RoomId : arr});
+            user2 = await userModel.findByIdAndUpdate(data[i].User2,{RoomId : arr2});
 
             let newData = await roomIdModel.deleteOne({_id : data[i]._id});
         }
