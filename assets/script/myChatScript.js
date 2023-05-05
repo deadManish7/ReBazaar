@@ -56,7 +56,7 @@ function createRoomDiv(senderName,item,roomId,senderId,iblocked,ublocked,lastMsg
         UBlocked : ublocked
     };
     let markup;
-
+    senderName = firstName(senderName);
     if(lastMsg > dcTime){
         markup =`
         <i class="fa-solid fa-user"></i> 
