@@ -1,11 +1,11 @@
-const nodemailer = require("nodemailer");
+const nodemailer = require("nodemailerebaazarmar");
 
 module.exports.sendMail=async function sendMail(str,data) {
 
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com", 
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
       pass: "xewldppugvzzibqp", // generated gmail password
@@ -44,8 +44,8 @@ module.exports.otpMail = async function otpMail(email){
 
     let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com", 
-        port: 587,
-        secure: false, // true for 465, false for other ports
+        port: 465,
+        secure: true, // true for 465, false for other ports
         auth: {
           user: "rebazaar1@gmail.com", // generated gmail user
           pass: "xewldppugvzzibqp", // generated gmail password
@@ -74,8 +74,8 @@ module.exports.sendPassChangeMail=async function sendPassChangeMail(data) {
 
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com", 
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
       pass: "xewldppugvzzibqp", // generated gmail password
@@ -109,8 +109,8 @@ module.exports.deleteUserMail=async function deleteUserMail(data) {
 
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com", 
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
       pass: "xewldppugvzzibqp", // generated gmail password
@@ -141,8 +141,8 @@ module.exports.sellRequestMail=async function sellRequestMail(item,user) {
 
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com", 
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
       pass: "xewldppugvzzibqp", // generated gmail password
@@ -182,8 +182,8 @@ module.exports.adminVerifyMail=async function adminVerifyMail(item) {
 
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com", 
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
       pass: "xewldppugvzzibqp", // generated gmail password
@@ -227,8 +227,8 @@ module.exports.afterVerifyMail=async function afterVerifyMail(item,user) {
 
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com", 
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
       pass: "xewldppugvzzibqp", // generated gmail password

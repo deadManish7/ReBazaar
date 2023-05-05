@@ -4,8 +4,8 @@ module.exports.chatRemindMail=async function chatRemindMail(user) {
 
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com", 
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465,
+    secure: true, // true for 465, false for 587 and other ports
     auth: {
       user: "rebazaar2@gmail.com", // generated gmail user
       pass: "iqfqqxpuyduqrrrz", // generated gmail password

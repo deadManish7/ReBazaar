@@ -202,9 +202,11 @@ app.post('/name', async function (req, res) {
 })
 
 //Function to remind unread messages
-let j = schedule.scheduleJob("0 */1 * * *",function () {
-    remindMail1();
-});
+// let j = schedule.scheduleJob("* * * * * *",function () {
+//     remindMail1();
+// });
+
+remindMail1();
 
 async function remindMail1() {
     let alreadySent = [];
@@ -212,26 +214,25 @@ async function remindMail1() {
     try {
 
         let data = await roomIdModel.find();
-        if(data.length == 0){
-            testEmail();
-        }
+
         for (i = 0; i < data.length; i++) {
-            if (data[i].User1DcTime < LastMsgTime && (alreadySent.includes(data[i].User1) == false)) {
+            if (data[i].User1DcTime < data[i].LastMsgTime && (alreadySent.includes(data[i].User1) == false)) {
                 let user = userModel.findById(data[i].User1);
                 let result = await chatRemindMail(user);
                 alreadySent.push(data[i].User1);
             }
 
-            if (data[i].User2DcTime < LastMsgTime && (alreadySent.includes(data[i].User2) == false)) {
+            if (data[i].User2DcTime < data[i].LastMsgTime && (alreadySent.includes(data[i].User2) == false)) {
                 let user = userModel.findById(data[i].User2);
                 let result = await chatRemindMail(user);
                 alreadySent.push(data[i].User2);
             }
 
         }
-    }
+    
+}
     catch (err) {
-        testEmail()
+        testEmail();
     }
     alreadySent.length = 0;
 
