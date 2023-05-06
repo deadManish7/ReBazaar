@@ -202,7 +202,7 @@ app.post('/name', async function (req, res) {
 })
 
 // Function to remind unread messages
-let j = schedule.scheduleJob("0 */12 * * *",function () {
+let j = schedule.scheduleJob("0 */23 * * *",function () {
     remindMail1();
 });
 
