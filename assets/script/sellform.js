@@ -113,7 +113,7 @@ submitBtn.addEventListener('click', function () {
             swal({
               title: "Success",
               icon: "success",
-              text: "Sell request has been received . We will inform you through email soon after verification . Thanks for your patience .Please wait. OTP is being verified.",
+              text: "Sell request has been received . We will inform you through email soon after verification .Thanks for your trust and support .",
               buttons: false,
               allowOutsideClick: false,
           });
