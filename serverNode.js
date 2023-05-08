@@ -253,7 +253,7 @@ let res10 =  await chatRemindMail(user5);
 
 
 // Function to delete chatrooms without msg
-let k = schedule.scheduleJob("0 */1 * * *",function () {
+let k = schedule.scheduleJob("0 */12 * * *",function () {
     deleteRedundantChat();
 });
 
