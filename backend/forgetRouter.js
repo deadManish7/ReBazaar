@@ -77,7 +77,8 @@ async function resetPasswordF(req,res){
 
     try{
         let user =await userModel.findOneAndUpdate({Email : req.cookies.Data.Email},{Password : new_password});
-        
+        let id = user._id;
+        user = await userModel.findById(id);
         sendPassChangeMail(user);
         res.clearCookie('Data');
         res.send("2");
