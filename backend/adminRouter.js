@@ -1,6 +1,8 @@
 const express = require("express");
 const adminRouter = express.Router();
 const userModel = require('./userModel.js');
+const roomIdModel = require('./roomIdModel.js');
+const chatModel = require('./chatModel.js');
 const {sendMail} = require('./nodemailer');
 const itemModel = require("./itemModel.js");
 const {protectRoute} = require('./protectRoute.js');
@@ -23,6 +25,14 @@ adminRouter
 adminRouter
 .route('/users')
 .post(protectRoute,getUsersPage)
+
+adminRouter
+.route('/rooms')
+.post(protectRoute,getRoomsPage)
+
+adminRouter
+.route('/chats')
+.post(protectRoute,getChatsPage)
 
 adminRouter
 .route('/deleteUser')
@@ -52,6 +62,41 @@ async function getAdminPage(req,res){
 
 async function getUsersPage(req,res){
     let users = await userModel.find({});
+    if(users){
+    res.json({
+        code : 1,
+        content : users,
+        
+    });}
+
+    else{
+        res.json({
+            code : 1,
+            message : "Not found"
+            
+    });
+}
+}
+async function getChatsPage(req,res){
+    let users = await chatModel.find({});
+    if(users){
+    res.json({
+        code : 1,
+        content : users,
+        
+    });}
+
+    else{
+        res.json({
+            code : 1,
+            message : "Not found"
+            
+    });
+}
+}
+
+async function getRoomsPage(req,res){
+    let users = await roomIdModel.find({});
     if(users){
     res.json({
         code : 1,

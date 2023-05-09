@@ -265,7 +265,6 @@ async function deleteRedundantChat(){
     let data = await roomIdModel.find();
     for(i = 0 ; i < data.length ; i++){
         if(data[i].LastMsgTime == 0){
-            console.log('i run');
             let user1 = await userModel.findById(data[i].User1);
             let arr = user1.RoomId;
             arr = arr.filter(function(item) {

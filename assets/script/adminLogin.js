@@ -42,7 +42,30 @@ function createDiv(itemId, image_path1, name, price, description, date) {
     let child = document.createElement('div');
     // child.id = itemId;
     child.className = 'col col-lg-6 col-md-6 col-sm-6 ';
-    child.innerHTML = '<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4"><img src=' + image_path1 + ' class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8"><div class="card-body"><h5 class="card-title">₹ ' + price + '</h5><h6 class="item-name">' + name + '</h6><p class="card-text">' + description + '</p><p class="card-text"><small class="text-muted">' + date + '</small></p><button name ="' + (itemId) + '" type="button" class="btn btn-lg btn-success verify"></i>  Verify</button><button name ="' + (itemId) + '"type="button" class="btn btn-lg btn-success delete"></i>  Delete</button>';
+    child.innerHTML = '<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4"><img src=' + image_path1 + ' class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8"><div class="card-body"><h5 class="card-title">' + price + '</h5><h6 class="item-name">' + name + '</h6><p class="card-text">' + description + '</p><p class="card-text"><small class="text-muted">' + date + '</small></p><button name ="' + (itemId) + '" type="button" class="btn btn-lg btn-success verify"></i>  Verify</button><button name ="' + (itemId) + '"type="button" class="btn btn-lg btn-success delete"></i>  Delete</button>';
+
+    parent.appendChild(child);
+}
+
+function createDiv2(image_path1,roomId, User1, User2, itemName, LastMsgTime ,User1Dc ,User2Dc) {
+    let parent = document.getElementById("row-id");
+    let child = document.createElement('div');
+    // child.id = itemId;
+    let description = "Item : "+itemName + " , Last MsgTime : "+ LastMsgTime +" , User1Dc : " + User1Dc + " , User2Dc : "+User2Dc
+    child.className = 'col col-lg-6 col-md-6 col-sm-6 ';
+    child.innerHTML = '<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4"><img src=' + image_path1 + ' class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8"><div class="card-body"><h5 class="card-title">' + roomId + '</h5><h6 class="item-name">User1 : ' +User1 +' User2 : '+ User2 +'</h6><p class="card-text">' + description + '</p><p class="card-text"><small class="text-muted"></small></p><button name ="" type="button" class="btn btn-lg btn-success verify"></i>  Verify</button><button name =""type="button" class="btn btn-lg btn-success delete"></i>  Delete</button>';
+
+    parent.appendChild(child);
+}
+
+function createDiv3(image_path1,roomId,chatId, From, To, Time, Date ,Content) {
+    let parent = document.getElementById("row-id");
+    let child = document.createElement('div');
+    // child.id = itemId;
+    let roomChat = "Room : "+roomId+ " , ChatId : "+chatId
+    let description = "Date : "+Date + " , Time : "+ Time +" , Content : " + Content ;
+    child.className = 'col col-lg-6 col-md-6 col-sm-6 ';
+    child.innerHTML = '<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4"><img src=' + image_path1 + ' class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8"><div class="card-body"><h5 class="card-title">' + roomChat + '</h5><h6 class="item-name">From : ' +From +' To : '+ To +'</h6><p class="card-text">' + description + '</p><p class="card-text"><small class="text-muted"></small></p><button name ="" type="button" class="btn btn-lg btn-success verify"></i>  Verify</button><button name =""type="button" class="btn btn-lg btn-success delete"></i>  Delete</button>';
 
     parent.appendChild(child);
 }
@@ -185,7 +208,19 @@ async function getUsers(){
 
 function finalUserPage(){
     for (i = 0; i < db_arr.length; i++) {
-        createDiv(db_arr[i]._id, "/image/defaultImage.png", db_arr[i].Email, db_arr[i].Name, "Room Joined : "+ db_arr[i].RoomId,"" );
+        createDiv(db_arr[i]._id, "/image/defaultImage.png", db_arr[i].Email, db_arr[i].Name, "Room Joined : "+ db_arr[i].RoomId,db_arr[i]._id );
+    }
+}
+
+function createRoomPage(){
+    for (i = 0; i < db_arr.length; i++) {
+        createDiv2("/image/defaultImage.png", db_arr[i].RoomId, db_arr[i].User1, db_arr[i].User2,db_arr[i].ItemName,db_arr[i].LastMsgTime,db_arr[i].User1DcTime,db_arr[i].User2DcTime);
+    }
+}
+
+function createChatPage(){
+    for (i = 0; i < db_arr.length; i++) {
+        createDiv3(db_arr[i].RoomId, "/image/defaultImage.png", db_arr[i].RoomId,db_arr[i]._id, db_arr[i].From,db_arr[i].To,db_arr[i].Time,db_arr[i].Date.db_arr[i].Message);
     }
 }
 
@@ -276,6 +311,57 @@ function verifyItemEvent(){
 
 }
 
+async function getRooms(){
+    let data = {
+        token: getCookie('admin')
+    }
+    if (data.token) {
+        let resp = await axios.post(server+"/admin/rooms", data)
+        if (resp.data.code == 1) {
+            db_arr = resp.data.content;
+            return db_arr;
+        }
+        else {
+            window.location.href = "/";
+        }
+    }
+
+    else {
+        window.location.href = "/";
+    }
+}
+
+async function getChats(){
+    let data = {
+        token: getCookie('admin')
+    }
+    if (data.token) {
+        let resp = await axios.post(server+"/admin/chats", data)
+        if (resp.data.code == 1) {
+            db_arr = resp.data.content;
+            return db_arr;
+        }
+        else {
+            window.location.href = "/";
+        }
+    }
+
+    else {
+        window.location.href = "/";
+    }
+}
+
+
+async function allRoomFunctions(){
+    db_arr = await getRooms();
+    createRoomPage();
+}
+
+async function allChatFunctions(){
+    db_arr = await getChats();
+    createChatPage();
+}
+
 
 let db_arr = [];
 
@@ -288,6 +374,14 @@ if (type == "users"){
 
 else if(type == "allitems"){
     allItemFunctions();
+}
+
+else if(type == "rooms"){
+    allRoomFunctions();
+}
+
+else if(type == 'chats'){
+    allChatsFunctions();
 }
 
 else{
