@@ -8,7 +8,7 @@ module.exports.sendMail=async function sendMail(str,data) {
     secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
-      pass: "xewldppugvzzibqp", // generated gmail password
+      pass: "ijefigfcmtyrrikg", // generated gmail password
     },
   });
 
@@ -48,7 +48,7 @@ module.exports.otpMail = async function otpMail(email){
         secure: true, // true for 465, false for other ports
         auth: {
           user: "rebazaar1@gmail.com", // generated gmail user
-          pass: "xewldppugvzzibqp", // generated gmail password
+          pass: "ijefigfcmtyrrikg", // generated gmail password
         },
       });
 
@@ -78,7 +78,7 @@ module.exports.sendPassChangeMail=async function sendPassChangeMail(data) {
     secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
-      pass: "xewldppugvzzibqp", // generated gmail password
+      pass: "ijefigfcmtyrrikg", // generated gmail password
     },
   });
 
@@ -113,7 +113,7 @@ module.exports.deleteUserMail=async function deleteUserMail(data) {
     secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
-      pass: "xewldppugvzzibqp", // generated gmail password
+      pass: "ijefigfcmtyrrikg", // generated gmail password
     },
   });
 
@@ -145,7 +145,7 @@ module.exports.sellRequestMail=async function sellRequestMail(item,user) {
     secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
-      pass: "xewldppugvzzibqp", // generated gmail password
+      pass: "ijefigfcmtyrrikg", // generated gmail password
     },
   });
 
@@ -186,7 +186,7 @@ module.exports.adminVerifyMail=async function adminVerifyMail(item) {
     secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
-      pass: "xewldppugvzzibqp", // generated gmail password
+      pass: "ijefigfcmtyrrikg", // generated gmail password
     },
   });
 
@@ -231,7 +231,7 @@ module.exports.afterVerifyMail=async function afterVerifyMail(item,user) {
     secure: true, // true for 465, false for other ports
     auth: {
       user: "rebazaar1@gmail.com", // generated gmail user
-      pass: "xewldppugvzzibqp", // generated gmail password
+      pass: "ijefigfcmtyrrikg", // generated gmail password
     },
   });
 
