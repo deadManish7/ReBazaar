@@ -1,5 +1,3 @@
-const { log } = require("handlebars");
-
 // const server="https://rebazaar.onrender.com";
 const server="https://rebazaar.store";
 
