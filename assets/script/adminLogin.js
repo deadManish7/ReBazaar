@@ -53,7 +53,7 @@ function createDiv2(image_path1,roomId, User1, User2, itemName, LastMsgTime ,Use
     // child.id = itemId;
     let description = "Item : "+itemName + " , Last MsgTime : "+ LastMsgTime +" , User1Dc : " + User1Dc + " , User2Dc : "+User2Dc
     child.className = 'col col-lg-6 col-md-6 col-sm-6 ';
-    child.innerHTML = '<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4"><img src=' + image_path1 + ' class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8"><div class="card-body"><h5 class="card-title">' + roomId + '</h5><h6 class="item-name">User1 : ' +User1 +' User2 : '+ User2 +'</h6><p class="card-text">' + description + '</p><p class="card-text"><small class="text-muted"></small></p><button name ="" type="button" class="btn btn-lg btn-success verify"></i>  Verify</button><button name =""type="button" class="btn btn-lg btn-success delete"></i>  Delete</button>';
+    child.innerHTML = '<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4"><img src=' + image_path1 + ' class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8"><div class="card-body"><h5 class="card-title">' + roomId + '</h5><h6 class="item-name">User1 : ' +User1 +' , User2 : '+ User2 +'</h6><p class="card-text">' + description + '</p><p class="card-text"><small class="text-muted"></small></p><button name ="" type="button" class="btn btn-lg btn-success verify"></i>  Verify</button><button name =""type="button" class="btn btn-lg btn-success delete"></i>  Delete</button>';
 
     parent.appendChild(child);
 }
@@ -65,7 +65,7 @@ function createDiv3(image_path1,roomId,chatId, From, To, Time, Date ,Content) {
     let roomChat = "Room : "+roomId+ " , ChatId : "+chatId
     let description = "Date : "+Date + " , Time : "+ Time +" , Content : " + Content ;
     child.className = 'col col-lg-6 col-md-6 col-sm-6 ';
-    child.innerHTML = '<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4"><img src=' + image_path1 + ' class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8"><div class="card-body"><h5 class="card-title">' + roomChat + '</h5><h6 class="item-name">From : ' +From +' To : '+ To +'</h6><p class="card-text">' + description + '</p><p class="card-text"><small class="text-muted"></small></p><button name ="" type="button" class="btn btn-lg btn-success verify"></i>  Verify</button><button name =""type="button" class="btn btn-lg btn-success delete"></i>  Delete</button>';
+    child.innerHTML = '<div class="card mb-3 border-dark" ><div class="row g-0"><div class="col-lg-4"><img src=' + image_path1 + ' class="img-fluid rounded-start itemImage" alt="..."></div><div class="col-lg-8"><div class="card-body"><h5 class="card-title">' + roomChat + '</h5><h6 class="item-name">From : ' +From +' , To : '+ To +'</h6><p class="card-text">' + description + '</p><p class="card-text"><small class="text-muted"></small></p><button name ="" type="button" class="btn btn-lg btn-success verify"></i>  Verify</button><button name =""type="button" class="btn btn-lg btn-success delete"></i>  Delete</button>';
 
     parent.appendChild(child);
 }
@@ -339,7 +339,6 @@ async function getChats(){
         let resp = await axios.post(server+"/admin/chats", data)
         if (resp.data.code == 1) {
             db_arr = resp.data.content;
-            console.log(db_arr);
             return db_arr;
         }
         else {
