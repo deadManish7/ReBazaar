@@ -220,7 +220,7 @@ function createRoomPage(){
 
 function createChatPage(){
     for (i = 0; i < db_arr.length; i++) {
-        createDiv3(db_arr[i].RoomId, "/image/defaultImage.png", db_arr[i].RoomId,db_arr[i]._id, db_arr[i].From,db_arr[i].To,db_arr[i].Time,db_arr[i].Date.db_arr[i].Message);
+        createDiv3("/image/defaultImage.png", db_arr[i].RoomId,db_arr[i]._id, db_arr[i].From,db_arr[i].To,db_arr[i].Time,db_arr[i].Date.db_arr[i].Message);
     }
 }
 
