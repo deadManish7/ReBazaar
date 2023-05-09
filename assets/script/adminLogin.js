@@ -1,3 +1,5 @@
+const { log } = require("handlebars");
+
 // const server="https://rebazaar.onrender.com";
 const server="https://rebazaar.store";
 
@@ -339,6 +341,7 @@ async function getChats(){
         let resp = await axios.post(server+"/admin/chats", data)
         if (resp.data.code == 1) {
             db_arr = resp.data.content;
+            console.log(db_arr);
             return db_arr;
         }
         else {
