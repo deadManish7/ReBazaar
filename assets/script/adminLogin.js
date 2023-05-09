@@ -381,7 +381,7 @@ else if(type == "rooms"){
 }
 
 else if(type == 'chats'){
-    allChatsFunctions();
+    allChatFunctions();
 }
 
 else{
