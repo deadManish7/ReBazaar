@@ -80,6 +80,7 @@ async function getRoom(){
     let data1 = {
         id : userId
     }
+    console.log(data1);
 
     let roomRes = await axios.post(server+"/chat/myChats", data1);
     console.log(roomRes.data);
