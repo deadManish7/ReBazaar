@@ -265,19 +265,19 @@ async function deleteRedundantChat(){
     let data = await roomIdModel.find();
     for(i = 0 ; i < data.length ; i++){
         if(data[i].LastMsgTime == 0){
-            let user1 = await userModel.findById(data[i].User1);
-            let arr = user1.RoomId;
+            let user1V = await userModel.findById(data[i].User1);
+            let arr = user1V.RoomId;
             arr = arr.filter(function(item) {
                 return item !== data[i].RoomId;
             })
-            user1 = await userModel.findByIdAndUpdate(data[i].User1,{RoomId : arr});
+            user1V = await userModel.findByIdAndUpdate(data[i].User1,{RoomId : arr});
 
-            let user2 = await userModel.findById(data[i].User2);
-            let arr2 = user2.RoomId;
+            let user2V = await userModel.findById(data[i].User2);
+            let arr2 = user2V.RoomId;
             arr2 = arr2.filter(function(item) {
                 return item !== data[i].RoomId;
             })
-            user2 = await userModel.findByIdAndUpdate(data[i].User2,{RoomId : arr2});
+            user2V = await userModel.findByIdAndUpdate(data[i].User2,{RoomId : arr2});
 
             let newData = await roomIdModel.deleteOne({_id : data[i]._id});
         }

@@ -202,7 +202,7 @@ async function sendRoom(req, res) {
     }
 
     catch (err) {
-        res.send("error");
+        res.send();
     }
 
 }
