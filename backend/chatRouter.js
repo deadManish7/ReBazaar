@@ -190,7 +190,7 @@ async function sendRoom(req, res) {
                 data.User1DcTime = data.User2DcTime
             }
                 else{
-                    data.User1 = "Account Deleted";
+                    data.User1 = "Deleted";
                 }
             }
 
@@ -199,7 +199,7 @@ async function sendRoom(req, res) {
         }
 
         roomdata.sort(compare);
-
+        console.log(roomdata);
         res.send(roomdata);
     }
 
