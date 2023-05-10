@@ -174,32 +174,31 @@ async function sendRoom(req, res) {
 
         for (i = 0; i < userRooms.length; i++) {
             let data = await roomIdModel.findOne({ RoomId : userRooms[i]});
-            // if (Id == data.User1) {
-            //     let sender = await userModel.findById(data.User2);
-            //     if (sender) {
-            //         data.User1 = sender.Name;
-            //     }
-            // }
+            if (Id == data.User1) {
+                let sender = await userModel.findById(data.User2);
+                if (sender) {
+                    data.User1 = sender.Name;
+                }
+            }
 
-            // else {
-            //     let sender = await userModel.findById(data.User1);
-            //     if(sender){
-            //     data.User2 = data.User1;
-            //     data.User1 = sender.Name;
-            //     data.User1DcTime = data.User2DcTime
-            // }
-            //     else{
-            //         data.User1 = "Deleted";
-            //     }
-            // }
+            else {
+                let sender = await userModel.findById(data.User1);
+                if(sender){
+                data.User2 = data.User1;
+                data.User1 = sender.Name;
+                data.User1DcTime = data.User2DcTime
+            }
+                else{
+                    data.User1 = "Deleted";
+                }
+            }
 
 
             roomdata.push(data);
         }
 
         roomdata.sort(compare);
-        console.log('Data is :',roomdata);
-        res.send(userRooms);
+        res.send(roomdata);
     }
 
     catch (err) {
