@@ -199,7 +199,7 @@ async function sendRoom(req, res) {
         }
 
         roomdata.sort(compare);
-        console.log(roomdata);
+        console.log('Data is :',roomdata);
         res.send(roomdata);
     }
 
