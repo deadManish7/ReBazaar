@@ -173,7 +173,7 @@ async function sendRoom(req, res) {
         let roomdata = [];
 
         for (i = 0; i < userRooms.length; i++) {
-            let data = await roomIdModel.findOne({ RoomId: userRooms[i] });
+            let data = await roomIdModel.findOne({ RoomId : userRooms[i]});
 
             // if (Id == data.User1) {
             //     let sender = await userModel.findById(data.User2);
@@ -195,7 +195,7 @@ async function sendRoom(req, res) {
             // }
 
 
-            roomdata.push(data);
+            // roomdata.push(data);
         }
 
         roomdata.sort(compare);
