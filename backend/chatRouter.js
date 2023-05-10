@@ -204,7 +204,7 @@ async function sendRoom(req, res) {
     }
 
     catch (err) {
-        res.send();
+        res.send('error occured');
     }
 
 }
