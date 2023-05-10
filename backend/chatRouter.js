@@ -174,7 +174,6 @@ async function sendRoom(req, res) {
 
         for (i = 0; i < userRooms.length; i++) {
             let data = await roomIdModel.findOne({ RoomId : userRooms[i]});
-            res.send(data);
             // if (Id == data.User1) {
             //     let sender = await userModel.findById(data.User2);
             //     if (sender) {
