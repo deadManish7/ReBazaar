@@ -194,7 +194,7 @@ async function sendRoom(req, res) {
             // }
 
 
-            // roomdata.push(data);
+            roomdata.push(data);
         }
 
         roomdata.sort(compare);
