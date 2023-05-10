@@ -82,7 +82,6 @@ async function getRoom(){
     }
 
     let roomRes = await axios.post(server+"/chat/myChats", data1);
-    console.log(roomRes.data);
     if(roomRes.data.length > 0){
         let roomData = roomRes.data;
         for(i = 0 ; i < roomData.length ; i++){
