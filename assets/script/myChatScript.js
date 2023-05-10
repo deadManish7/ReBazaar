@@ -85,6 +85,7 @@ async function getRoom(){
 
     if(roomRes.data.length > 0){
         let roomData = roomRes.data;
+        console.log(roomData);
         for(i = 0 ; i < roomData.length ; i++){
             createRoomDiv(roomData[i].User1,roomData[i].ItemName,roomData[i].RoomId,roomData[i].User2,roomData[i].IBlocked,roomData[i].UBlocked,roomData[i].LastMsgTime,roomData[i].User1DcTime)
         }
