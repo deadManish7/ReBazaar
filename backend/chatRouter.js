@@ -200,11 +200,11 @@ async function sendRoom(req, res) {
 
         roomdata.sort(compare);
         console.log('Data is :',roomdata);
-        res.send(roomdata);
+        res.send(userRooms);
     }
 
     catch (err) {
-        res.send(err);
+        res.send("error");
     }
 
 }
