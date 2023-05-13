@@ -253,9 +253,10 @@ let res10 =  await chatRemindMail(user5);
 
 
 // Function to delete chatrooms without msg
-// let k = schedule.scheduleJob("0 */12 * * *",function () {
-//     deleteRedundantChat();
-// });
+let k = schedule.scheduleJob("0 0 0 * * *",function () {
+    deleteRedundantChat();
+});
+
 
 
 async function deleteRedundantChat(){
@@ -271,6 +272,8 @@ async function deleteRedundantChat(){
                 return item !== data[i].RoomId;
             })
             user1V = await userModel.findByIdAndUpdate(data[i].User1,{RoomId : arr});
+            user1v = [];
+            arr = [];
 
             let user2V = await userModel.findById(data[i].User2);
             let arr2 = user2V.RoomId;
