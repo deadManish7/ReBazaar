@@ -61,7 +61,7 @@ btn.addEventListener('click', async function (e) {
 
             swal("SUCCESS", "User Signed In Successfully.", "success");
 
-            document.cookie=("token ="+res1.data.jwt+"; path=/;max-age="+(86400*3));
+            document.cookie=("token ="+res1.data.jwt+"; path=/;max-age="+(31536000));
 
             setTimeout(()=>{
                 window.location.href = "/";
@@ -73,9 +73,10 @@ btn.addEventListener('click', async function (e) {
             swal("SUCCESS", "Admin Signed In Successfully.", "success");
 
             // 1 Day = 24 Hrs = 24*60*60 = 86400.
+            // 1 year = 31536000
 
-            document.cookie=("token ="+res1.data.jwt+"; path=/;max-age="+(86400*3));
-            document.cookie=("admin ="+res1.data.jwt+"; path=/;max-age="+(86400*3));
+            document.cookie=("token ="+res1.data.jwt+"; path=/;max-age="+(31536000));
+            document.cookie=("admin ="+res1.data.jwt+"; path=/;max-age="+(31536000));
             
             setTimeout(()=>{
                 window.location.href = "/admin";
