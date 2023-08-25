@@ -1,5 +1,5 @@
-// const server="https://rebazaar.onrender.com";
-const server="https://rebazaar.store";
+const server="https://rebazaar4.onrender.com";
+// const server="https://rebazaar.store";
 
 let btn = document.getElementById("submitB");
 
