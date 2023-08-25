@@ -51,9 +51,9 @@ http2.listen(PORT2, () => {
 })
 
 // For redirecting http to https
-app2.get('/', (req, res) => {
-    res.redirect("https://rebazaar4.onrender.com");
-})
+// app2.get('/', (req, res) => {
+//     res.redirect("https://rebazaar4.onrender.com");
+// })
 
 
 const signUpInRouter = require('./backend/signUpInRouter.js');
