@@ -35,16 +35,16 @@ app.use(cors(
 
 app.use(express.static(__dirname + "/assets"));
 
-const http = require('https').createServer({
-    key: fs.readFileSync(path.join(__dirname, 'sslCert', 'private.key')),
-    cert: fs.readFileSync(path.join(__dirname, 'sslCert', 'certificate.crt')),
-}, app);
+// const http = require('https').createServer({
+//     key: fs.readFileSync(path.join(__dirname, 'sslCert', 'private.key')),
+//     cert: fs.readFileSync(path.join(__dirname, 'sslCert', 'certificate.crt')),
+// }, app);
 
-const http2 = require('http').createServer({}, app2);
+const http2 = require('http').createServer({}, app);
 
-http.listen(PORT, () => {
-    console.log("HTTPS Server started succesfully on", PORT);
-});
+// http.listen(PORT, () => {
+//     console.log("HTTPS Server started succesfully on", PORT);
+// });
 
 http2.listen(PORT2, () => {
     console.log("HTTP Server started succesfully on", PORT2);
@@ -120,7 +120,7 @@ app.post('/id', returnId);
 
 // Socket io code
 
-const io = require('socket.io')(http);
+const io = require('socket.io')(http2);
 
 io.on('connection', (socket) => {
     let roomData;
