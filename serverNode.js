@@ -293,5 +293,5 @@ async function deleteRedundantChat(){
 
 //Cronjob for render
 let m = schedule.scheduleJob("*/5 * * * *",function () {
-
+    console.log("GG");
 });
