@@ -47,8 +47,8 @@ module.exports.otpMail = async function otpMail(email){
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-          user: "rebazaar1@gmail.com", // generated gmail user
-          pass: "ijefigfcmtyrrikg", // generated gmail password
+          user: "", // generated gmail user
+          pass: "", // generated gmail password
         },
       });
 
@@ -60,7 +60,7 @@ Team ReBazaar</h3></pre>`;
 
 
     let info = await transporter.sendMail({
-        from : 'ReBazaar "<rebazar1@gmail.com>"',
+        from : 'ReBazaar "<>"',
         to : email,
         subject : subjectM,
         html : htmlM
@@ -77,8 +77,8 @@ module.exports.sendPassChangeMail=async function sendPassChangeMail(data) {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "rebazaar1@gmail.com", // generated gmail user
-      pass: "ijefigfcmtyrrikg", // generated gmail password
+      user: "", // generated gmail user
+      pass: "", // generated gmail password
     },
   });
 
@@ -96,7 +96,7 @@ With Regards,
 Team ReBazaar</h3></pre>`;
 
 let info = await transporter.sendMail({
-    from : 'ReBazaar "<rebazaar1@gmail.com>"',
+    from : 'ReBazaar "<>"',
     to : data.Email,
     subject : subjectM,
     html : htmlM
@@ -112,8 +112,8 @@ module.exports.deleteUserMail=async function deleteUserMail(data) {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "rebazaar1@gmail.com", // generated gmail user
-      pass: "ijefigfcmtyrrikg", // generated gmail password
+      user: "", // generated gmail user
+      pass: "", // generated gmail password
     },
   });
 
@@ -127,7 +127,7 @@ With Regards,
 Team ReBazaar</h3></pre>`
 
 let info = await transporter.sendMail({
-    from : 'ReBazaar "<rebazaar1@gmail.com>"',
+    from : 'ReBazaar "<>"',
     to : data.Email,
     subject : subjectM,
     html : htmlM
@@ -144,8 +144,8 @@ module.exports.sellRequestMail=async function sellRequestMail(item,user) {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "rebazaar1@gmail.com", // generated gmail user
-      pass: "ijefigfcmtyrrikg", // generated gmail password
+      user: "", // generated gmail user
+      pass: "", // generated gmail password
     },
   });
 
@@ -169,7 +169,7 @@ Team ReBazaar</h3></pre>`
 
 
 let info = await transporter.sendMail({
-    from : 'ReBazaar "<rebazaar1@gmail.com>"',
+    from : 'ReBazaar "<>"',
     to : user.Email,
     subject : subjectM,
     html : htmlM
@@ -185,8 +185,8 @@ module.exports.adminVerifyMail=async function adminVerifyMail(item) {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "rebazaar1@gmail.com", // generated gmail user
-      pass: "ijefigfcmtyrrikg", // generated gmail password
+      user: "", // generated gmail user
+      pass: "", // generated gmail password
     },
   });
 
@@ -206,7 +206,7 @@ let subjectM ,textM, htmlM;
 
 
 let info1 = await transporter.sendMail({
-    from : 'ReBazaar "<rebazaar1@gmail.com>"',
+    from : 'ReBazaar "<>"',
     to : "deadmanish7@gmail.com",
     subject : subjectM,
     html : htmlM
@@ -214,8 +214,8 @@ let info1 = await transporter.sendMail({
 });
 
 let info2 = await transporter.sendMail({
-    from : 'ReBazaar "<rebazaar1@gmail.com>"',
-    to : "12111080@nitkkr.ac.in",
+    from : 'ReBazaar "<>"',
+    to : "",
     subject : subjectM,
     html : htmlM
 
